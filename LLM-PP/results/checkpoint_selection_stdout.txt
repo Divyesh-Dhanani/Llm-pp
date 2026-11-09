@@ -1,0 +1,42 @@
+            loss  seed  epoch  step  val_loss  val_r2  val_mae  test_r2  test_mae
+  full-text loss     0      1   160    0.2405  0.8332   0.0642   0.8265    0.0642
+  full-text loss     0      2   320    0.2440  0.8367   0.0628   0.8276    0.0624
+  full-text loss     0      3   480    0.2507  0.8316   0.0648   0.7967    0.0669
+  full-text loss     0      4   640    0.2552  0.8422   0.0630   0.8220    0.0636
+  full-text loss    42      1   160    0.2476  0.8163   0.0680   0.7862    0.0727
+  full-text loss    42      2   320    0.2422  0.8365   0.0631   0.8185    0.0624
+  full-text loss    42      3   480    0.2460  0.8423   0.0623   0.8028    0.0658
+  full-text loss    42      4   640    0.2442  0.8455   0.0615   0.8150    0.0629
+  full-text loss    42      5   800    0.2587  0.8450   0.0622   0.8414    0.0603
+  full-text loss   123      1   160    0.2624  0.8351   0.0645   0.8192    0.0663
+  full-text loss   123      2   320    0.2495  0.8457   0.0628   0.8345    0.0612
+  full-text loss   123      3   480    0.2386  0.8364   0.0633   0.7820    0.0675
+  full-text loss   123      4   640    0.2441  0.8495   0.0613   0.8173    0.0639
+  full-text loss   123      5   800    0.2628  0.8516   0.0616   0.8228    0.0638
+  full-text loss   123      6   960    0.2685  0.8441   0.0624   0.8139    0.0644
+answer-only loss     0      1   160    0.2677  0.8327   0.0635   0.7957    0.0674
+answer-only loss     0      2   320    0.2670  0.8184   0.0661   0.8281    0.0583
+answer-only loss     0      3   480    0.2945  0.8532   0.0608   0.8219    0.0608
+answer-only loss     0      4   640    0.2934  0.8517   0.0623   0.8258    0.0601
+answer-only loss     0      5   800    0.3163  0.8638   0.0618   0.8334    0.0633
+answer-only loss    42      1   160    0.2675  0.8304   0.0630   0.7824    0.0694
+answer-only loss    42      2   320    0.2659  0.8315   0.0637   0.8180    0.0591
+answer-only loss    42      3   480    0.2991  0.8523   0.0613   0.8004    0.0633
+answer-only loss    42      4   640    0.2967  0.8792   0.0586   0.8214    0.0622
+answer-only loss    42      5   800    0.3034  0.8763   0.0590   0.8547    0.0593
+answer-only loss   123      1   160    0.2662  0.8302   0.0636   0.8077    0.0666
+answer-only loss   123      2   320    0.2687  0.8003   0.0698   0.8409    0.0578
+answer-only loss   123      3   480    0.2948  0.8464   0.0629   0.8001    0.0630
+answer-only loss   123      4   640    0.3000  0.8595   0.0618   0.8302    0.0596
+
+            loss                            rule epochs  test_r2_mean  test_r2_sd  test_mae_mean  test_mae_sd
+  full-text loss lowest validation loss (recipe)  1 2 3        0.8090      0.0238         0.0647       0.0026
+  full-text loss           lowest validation MAE  2 4 4        0.8200      0.0067         0.0630       0.0007
+  full-text loss                   fixed epoch 1  1 1 1        0.8107      0.0215         0.0677       0.0045
+  full-text loss                   fixed epoch 2  2 2 2        0.8269      0.0080         0.0620       0.0007
+  full-text loss                   fixed epoch 3  3 3 3        0.7938      0.0107         0.0667       0.0009
+answer-only loss lowest validation loss (recipe)  2 2 1        0.8179      0.0102         0.0613       0.0045
+answer-only loss           lowest validation MAE  3 4 4        0.8245      0.0049         0.0609       0.0013
+answer-only loss                   fixed epoch 1  1 1 1        0.7952      0.0126         0.0678       0.0015
+answer-only loss                   fixed epoch 2  2 2 2        0.8290      0.0115         0.0584       0.0007
+answer-only loss                   fixed epoch 3  3 3 3        0.8075      0.0125         0.0624       0.0013

@@ -1,0 +1,40 @@
+--- a/ab/gpt/act/acc_predictor/train.py
++++ b/ab/gpt/act/acc_predictor/train.py
+@@ -5,8 +5,8 @@
+ 
+ import torch
+ from unsloth import FastLanguageModel
+-from trl import SFTTrainer
+-from transformers import EarlyStoppingCallback, TrainingArguments
++from trl import SFTConfig, SFTTrainer
++from transformers import EarlyStoppingCallback
+ from datasets import Dataset
+ 
+ from . import config
+@@ -122,11 +122,14 @@
+     if MAX_STEPS > 0:
+         ta_kwargs["max_steps"] = MAX_STEPS
+ 
++    # The sequence limit must be set on the config: TRL/Unsloth truncate to `max_length` (default 1024) and do not use
++    # the `max_seq_length` keyword of SFTTrainer for that, which silently cut long (source-code) prompts before the answer.
++    ta_kwargs["max_length"] = max_seq_len
+     try:
+-        training_args = TrainingArguments(**ta_kwargs)
++        training_args = SFTConfig(**ta_kwargs)
+     except TypeError:
+         ta_kwargs["evaluation_strategy"] = ta_kwargs.pop("eval_strategy")
+-        training_args = TrainingArguments(**ta_kwargs)
++        training_args = SFTConfig(**ta_kwargs)
+ 
+     trainer = SFTTrainer(
+         model=model,
+@@ -143,6 +146,9 @@
+         from unsloth.chat_templates import train_on_responses_only
+         instruction_part, response_part = config.RESPONSE_ONLY_MARKERS
+         trainer = train_on_responses_only(trainer, instruction_part=instruction_part, response_part=response_part)
++    lengths = [len(x) for x in trainer.train_dataset["input_ids"]]
++    print(f"SFT sequence limit: max_length={trainer.args.max_length} | train examples={len(lengths)} | "
++          f"longest tokenized example={max(lengths)}")
+     trainer.train()
+ 
+     output_dir.mkdir(parents=True, exist_ok=True)

@@ -1,0 +1,25 @@
+test_run out/acc_predict_3epoch/gemma-2-9b-it-bnb-4bit_seed123/test_predictions.csv
+total_samples 657
+valid_predictions 657
+parse_failures 0
+best_accuracy_RMSE 0.1298
+best_accuracy_MAE 0.0640
+best_accuracy_Pearson_r 0.9167
+best_accuracy_Spearman_r 0.9188
+best_accuracy_R2 0.8234
+best_epoch_RMSE 15.3296
+best_epoch_MAE 8.9787
+best_epoch_Pearson_r 0.4211
+best_epoch_Spearman_r 0.1491
+best_epoch_R2 -0.1989
+
+per_dataset_best_accuracy (dataset n pearson_r spearman_r r2 rmse mae [low_n]):
+  celeba-gender 55 0.9391 0.9272 0.8503 0.0575 0.0264
+  cifar-10 73 0.8786 0.8768 0.7554 0.1067 0.0788
+  cifar-100 53 0.8666 0.8486 0.6755 0.0882 0.0742
+  coco 133 0.9664 0.9438 0.9137 0.0234 0.0183
+  imagenette 44 0.5437 0.5130 -0.1914 0.1375 0.1184
+  mnist 71 0.2252 0.7237 -0.0878 0.1515 0.0470
+  places365 15 0.8725 0.8293 0.5186 0.0555 0.0400
+  svhn 70 0.8167 0.8402 0.5304 0.2127 0.1031
+  wikitext 143 0.7266 0.8529 0.0674 0.1650 0.0847

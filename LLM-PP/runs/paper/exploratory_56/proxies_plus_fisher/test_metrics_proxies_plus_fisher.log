@@ -1,0 +1,25 @@
+test_run out/acc_predict/proxies_plus_fisher/test_predictions_proxies_plus_fisher.csv
+total_samples 657
+valid_predictions 657
+parse_failures 0
+best_accuracy_RMSE 0.1907
+best_accuracy_MAE 0.1003
+best_accuracy_Pearson_r 0.8223
+best_accuracy_Spearman_r 0.8357
+best_accuracy_R2 0.6185
+best_epoch_RMSE 17.3933
+best_epoch_MAE 10.4551
+best_epoch_Pearson_r -0.0017
+best_epoch_Spearman_r -0.1157
+best_epoch_R2 -0.5435
+
+per_dataset_best_accuracy (dataset n pearson_r spearman_r r2 rmse mae [low_n]):
+  celeba-gender 55 -0.0579 -0.2100 -0.6564 0.1913 0.1178
+  cifar-10 73 0.7549 0.7824 0.5408 0.1462 0.1118
+  cifar-100 53 0.5403 0.6262 0.1229 0.1450 0.1157
+  coco 133 0.9359 0.8998 0.8524 0.0306 0.0243
+  imagenette 44 0.4813 0.4411 -0.5310 0.1559 0.1195
+  mnist 71 0.1597 0.6984 -0.0854 0.1513 0.0462
+  places365 15 0.7613 0.7171 -0.1941 0.0874 0.0693
+  svhn 70 0.0704 0.4098 -0.8945 0.4272 0.3000
+  wikitext 143 0.7288 0.8546 0.1615 0.1565 0.0792

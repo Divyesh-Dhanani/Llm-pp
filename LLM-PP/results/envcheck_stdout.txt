@@ -1,0 +1,5 @@
+test rows: 657
+pred_best_accuracy: identical 657/657, max |difference| 0
+pred_best_epoch: identical 657/657, max |difference| 0
+second machine: R2 0.7283, MAE 0.0803
+main environment: R2 0.7283, MAE 0.0803

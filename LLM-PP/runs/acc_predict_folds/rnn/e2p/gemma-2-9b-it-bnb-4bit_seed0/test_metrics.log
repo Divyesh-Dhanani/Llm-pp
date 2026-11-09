@@ -1,0 +1,20 @@
+test_run out/acc_predict_folds/rnn/e2p/gemma-2-9b-it-bnb-4bit_seed0/test_predictions.csv
+total_samples 201
+valid_predictions 201
+parse_failures 0
+best_accuracy_RMSE 0.1053
+best_accuracy_MAE 0.0551
+best_accuracy_Pearson_r 0.9528
+best_accuracy_Spearman_r 0.9478
+best_accuracy_R2 0.8870
+best_epoch_RMSE 26.4543
+best_epoch_MAE 15.4328
+best_epoch_Pearson_r -0.0571
+best_epoch_Spearman_r 0.5534
+best_epoch_R2 -1.0285
+
+per_dataset_best_accuracy (dataset n pearson_r spearman_r r2 rmse mae [low_n]):
+  cifar-10 4 0.8886 1.0000 0.2219 0.1154 0.1025 low_n
+  coco 97 0.9156 0.7673 0.7137 0.0277 0.0179
+  imagenette 1 nan nan nan 0.0800 0.0800 low_n
+  wikitext 99 0.8372 0.9314 0.3379 0.1455 0.0894

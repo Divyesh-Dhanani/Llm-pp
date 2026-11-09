@@ -1,0 +1,26 @@
+\begin{table*}[t]
+\centering
+\footnotesize
+\caption{Best-accuracy $R^2$ on five held-out families (86 test architectures). LLMs: seed 0; Qwen3-8B with answer-only loss and batch $1\times32$; Gemma-2-9B with the full-text loss. Data order is fixed for all LLM runs except on the main split (\cref{sec:data-order}). XGBoost: mean over 5 seeds; ensemble: unweighted average of Gemma-2-9B and XGBoost. --: not run. A superscript counts answers that failed to parse (scored as the training mean). Confidence intervals and MAE: \cref{S-tab:folds-full}.}
+\label{tab:folds}
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{lccccc}
+\toprule
+Method & other (main) & transformer & rnn & detector & segmentation \\
+ & 15 arch. & 35 arch. & 9 arch. & 9 arch. & 18 arch. \\
+\midrule
+Qwen3-8B, 3 ep. + proxies & 0.801 & 0.917 & 0.959 & -- & -- \\
+Qwen3-8B, 3 ep. + proxies + code & 0.843 & 0.903$^{4}$ & 0.816 & -- & -- \\
+Gemma-2-9B, 2 ep. + proxies & 0.689 & 0.889 & 0.887 & 0.648 & 0.650 \\
+Gemma-2-9B, 3 ep. + proxies & 0.785 & 0.900 & 0.870 & 0.841 & 0.790 \\
+Gemma-2-9B + XGBoost, 3 ep. + proxies & 0.856 & 0.922 & 0.944 & 0.852 & 0.766 \\
+XGBoost, 2 ep. + proxies & 0.813 & 0.881 & 0.970 & 0.663 & 0.130 \\
+XGBoost, 3 ep. & 0.833 & 0.910 & 0.975 & 0.805 & 0.623 \\
+XGBoost, 3 ep. + proxies & 0.852 & 0.911 & 0.968 & 0.839 & 0.376 \\
+LC-PFN, 2 ep. & 0.572 & 0.839 & 0.723 & 0.671 & 0.490 \\
+LC-PFN, 3 ep. & 0.666 & 0.863 & 0.756 & 0.776 & 0.557 \\
+Per-dataset training mean & 0.615 & 0.567 & 0.679 & 0.056 & $-$1.107 \\
+\bottomrule
+\end{tabular}
+}
+\end{table*}

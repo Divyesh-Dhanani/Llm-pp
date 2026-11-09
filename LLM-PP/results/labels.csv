@@ -1,0 +1,6 @@
+,best_accuracy,best_accuracy,best_accuracy,epochs_to_best,epochs_to_best,epochs_to_best,total_epochs,total_epochs,total_epochs
+,mean,median,std,mean,median,std,mean,median,std
+split,,,,,,,,,
+train,0.548,0.57,0.292,40.044,45.0,16.574,51.718,50.0,12.766
+val,0.325,0.208,0.3,31.983,41.0,19.83,50.667,50.0,5.74
+test,0.546,0.584,0.309,39.957,48.0,14.011,50.0,50.0,0.0

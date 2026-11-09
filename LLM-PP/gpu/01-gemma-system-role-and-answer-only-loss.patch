@@ -1,0 +1,99 @@
+--- a/ab/gpt/act/acc_predictor/common.py
++++ b/ab/gpt/act/acc_predictor/common.py
+@@ -32,16 +32,44 @@
+         return default
+ 
+ 
++def _merge_system_into_user(messages: list[dict]) -> list[dict]:
++    """Fold system messages into the first user message (for templates such as
++    Gemma 2 that reject the system role)."""
++    system = "\n\n".join(m["content"] for m in messages if m.get("role") == "system")
++    merged, done = [], False
++    for m in messages:
++        if m.get("role") == "system":
++            continue
++        if not done and m.get("role") == "user" and system:
++            m = {**m, "content": f"{system}\n\n{m['content']}"}
++            done = True
++        merged.append(m)
++    return merged
++
++
++def _apply_chat_template(tokenizer, messages: list[dict], **kwargs) -> str:
++    """apply_chat_template that retries with the system prompt merged into the
++    user turn when the model's template does not support the system role."""
++    try:
++        return tokenizer.apply_chat_template(messages, **kwargs)
++    except Exception as exc:
++        if "System role not supported" not in str(exc):
++            raise
++        return tokenizer.apply_chat_template(_merge_system_into_user(messages), **kwargs)
++
++
+ def _apply_chat_template_for_inference(tokenizer, messages: list[dict]) -> str:
+     try:
+-        return tokenizer.apply_chat_template(
++        return _apply_chat_template(
++            tokenizer,
+             messages,
+             tokenize=False,
+             add_generation_prompt=True,
+             enable_thinking=False,
+         )
+     except TypeError:
+-        return tokenizer.apply_chat_template(
++        return _apply_chat_template(
++            tokenizer,
+             messages,
+             tokenize=False,
+             add_generation_prompt=True,
+--- a/ab/gpt/act/acc_predictor/config.py
++++ b/ab/gpt/act/acc_predictor/config.py
+@@ -119,6 +119,14 @@
+ # (R^2=0.820/0.056) as a single-variable change: everything else identical.
+ USE_CHAIN_OF_THOUGHT = False
+ 
++# Answer-only training loss. By default SFT computes the loss over the whole chat text (system
++# prompt, user prompt, source code and answer), so the JSON answer is only ~2-6% of the trained
++# tokens. When True, Unsloth's train_on_responses_only masks everything except the assistant turn,
++# so both the training loss and the validation loss used for early stopping measure the prediction
++# itself. RESPONSE_ONLY_MARKERS are the ChatML (Qwen) turn headers.
++TRAIN_ON_RESPONSES_ONLY = False
++RESPONSE_ONLY_MARKERS = ("<|im_start|>user\n", "<|im_start|>assistant\n")
++
+ # Model registry: publicly available Unsloth 4-bit checkpoints usable by this exact
+ # QLoRA pipeline. Qwen stays the DEFAULT (nothing removed). Switch the active model
+ # with the ACC_MODEL env var (e.g. ACC_MODEL=llama3.1-8b) -- no code edit needed --
+--- a/ab/gpt/act/acc_predictor/train.py
++++ b/ab/gpt/act/acc_predictor/train.py
+@@ -9,8 +9,9 @@
+ from transformers import EarlyStoppingCallback, TrainingArguments
+ from datasets import Dataset
+ 
++from . import config
+ from .config import *  # noqa: F401,F403
+-from .common import _load_messages
++from .common import _apply_chat_template, _load_messages
+ from .model import _load_model
+ 
+ 
+@@ -19,7 +20,7 @@
+ def _format_dataset(examples: dict, tokenizer) -> dict:
+     texts = []
+     for messages in examples["messages"]:
+-        text = tokenizer.apply_chat_template(messages, tokenize=False, add_generation_prompt=False)
++        text = _apply_chat_template(tokenizer, messages, tokenize=False, add_generation_prompt=False)
+         texts.append(text + tokenizer.eos_token)
+     return {"text": texts}
+ 
+@@ -138,6 +139,10 @@
+         args=training_args,
+         callbacks=[EarlyStoppingCallback(early_stopping_patience=early_stopping_patience)],
+     )
++    if config.TRAIN_ON_RESPONSES_ONLY:
++        from unsloth.chat_templates import train_on_responses_only
++        instruction_part, response_part = config.RESPONSE_ONLY_MARKERS
++        trainer = train_on_responses_only(trainer, instruction_part=instruction_part, response_part=response_part)
+     trainer.train()
+ 
+     output_dir.mkdir(parents=True, exist_ok=True)

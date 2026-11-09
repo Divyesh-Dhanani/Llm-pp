@@ -1,0 +1,25 @@
+test_run out/acc_predict_ablation/e3p_ro_all/Qwen3-8B-unsloth-bnb-4bit_seed123/ckpt_eval/checkpoint-480_val_predictions.csv
+total_samples 600
+valid_predictions 600
+parse_failures 0
+best_accuracy_RMSE 0.1173
+best_accuracy_MAE 0.0629
+best_accuracy_Pearson_r 0.9279
+best_accuracy_Spearman_r 0.9298
+best_accuracy_R2 0.8464
+best_epoch_RMSE 26.6477
+best_epoch_MAE 19.7717
+best_epoch_Pearson_r 0.1368
+best_epoch_Spearman_r 0.2285
+best_epoch_R2 -0.8089
+
+per_dataset_best_accuracy (dataset n pearson_r spearman_r r2 rmse mae [low_n]):
+  celeba-gender 5 0.9707 0.1539 0.2830 0.0672 0.0480
+  cifar-10 53 0.6606 0.5960 0.2943 0.1332 0.0875
+  cifar-100 13 0.8539 0.8278 0.7117 0.0653 0.0538
+  coco 366 0.9486 0.8894 0.8884 0.0644 0.0367
+  imagenette 30 0.8422 0.8696 0.6901 0.0856 0.0627
+  mnist 24 0.6207 0.7835 0.0425 0.1655 0.1058
+  places365 3 0.9754 0.8660 0.8130 0.0387 0.0300 low_n
+  svhn 7 0.8655 0.9303 0.6025 0.1662 0.0943
+  wikitext 99 0.7613 0.8677 -0.4650 0.2164 0.1369

@@ -1,0 +1,8 @@
+task,train,val,test
+img-captioning,198,217,133
+img-classification,3585,135,381
+img-denoising,1,0,0
+img-segmentation,1206,0,0
+obj-detection,0,139,0
+txt-generation,0,99,143
+txt-image,102,10,0

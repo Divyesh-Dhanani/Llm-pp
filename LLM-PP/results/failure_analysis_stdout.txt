@@ -1,0 +1,45 @@
+                              share_err_gt_0.2  share_err_gt_0.3  share_of_sq_error_from_err_gt_0.2  r2_without_err_gt_0.2
+model                 config                                                                                              
+Gemma-2-9B            e2+P               0.113             0.073                              0.858                  0.956
+                      e3+P               0.064             0.044                              0.806                  0.963
+Llama-3.1-8B          e2+P               0.081             0.057                              0.810                  0.952
+                      e3+P               0.082             0.052                              0.804                  0.956
+Qwen3-8B              e2+P               0.094             0.065                              0.867                  0.964
+                      e3+P               0.072             0.057                              0.857                  0.968
+XGBoost (5-seed mean) e3+P               0.085             0.037                                NaN                    NaN
+
+missed_in_exactly_k_seeds     1     2     3
+model        config                        
+Gemma-2-9B   e2+P          17.0   8.0  63.0
+             e3+P          16.0   9.0  31.0
+Llama-3.1-8B e2+P          15.0  18.0  36.0
+             e3+P          42.0  15.0  30.0
+Qwen3-8B     e2+P          19.0  14.0  46.0
+             e3+P          35.0  13.0  27.0
+
+                model  seed                                                                                  big_miss_datasets
+             Qwen3-8B     0              svhn:14; celeba-gender:13; wikitext:8; cifar-10:6; imagenette:6; cifar-100:4; mnist:4
+             Qwen3-8B    42               svhn:13; wikitext:7; cifar-10:4; mnist:4; imagenette:3; cifar-100:2; celeba-gender:1
+             Qwen3-8B   123               svhn:30; cifar-10:7; wikitext:7; cifar-100:4; mnist:3; celeba-gender:1; imagenette:1
+         Llama-3.1-8B     0 svhn:30; wikitext:12; celeba-gender:9; cifar-10:9; imagenette:4; cifar-100:3; mnist:3; places365:1
+         Llama-3.1-8B    42                               wikitext:18; svhn:15; imagenette:5; mnist:4; cifar-10:3; cifar-100:3
+         Llama-3.1-8B   123               svhn:15; wikitext:8; imagenette:6; cifar-10:5; cifar-100:4; mnist:4; celeba-gender:1
+           Gemma-2-9B     0                               wikitext:23; svhn:14; cifar-100:4; imagenette:4; cifar-10:3; mnist:3
+           Gemma-2-9B    42              svhn:15; wikitext:11; cifar-10:4; imagenette:3; mnist:3; celeba-gender:1; cifar-100:1
+           Gemma-2-9B   123              wikitext:14; svhn:11; imagenette:5; cifar-10:3; mnist:3; celeba-gender:1; cifar-100:1
+XGBoost (5-seed mean)    -1             svhn:20; mnist:11; cifar-10:10; wikitext:9; imagenette:4; celeba-gender:1; cifar-100:1
+
+Gemma-2-9B mnist (n=71): pearson=0.658 spearman=0.819; gt range 0.11-0.99, median 0.98
+  pearson without its 3 largest misses: 0.860
+  gt=0.24 pred=0.97 | ep1=0.190 ep2=0.193 ep3=0.204 | RegNet
+  gt=0.85 pred=0.48 | ep1=0.127 ep2=0.145 ep3=0.163 | BayesianNet-3
+  gt=0.11 pred=0.43 | ep1=0.114 ep2=0.114 ep3=0.114 | MobileNetV3
+  gt=0.54 pred=0.73 | ep1=0.128 ep2=0.149 ep3=0.173 | BayesianNet-2
+  gt=0.81 pred=0.98 | ep1=0.134 ep2=0.242 ep3=0.324 | BayesianNet-2
+Qwen3-8B mnist (n=71): pearson=0.149 spearman=0.784; gt range 0.11-0.99, median 0.98
+  pearson without its 3 largest misses: 0.452
+  gt=0.11 pred=0.98 | ep1=0.114 ep2=0.114 ep3=0.114 | MobileNetV3
+  gt=0.24 pred=0.95 | ep1=0.190 ep2=0.193 ep3=0.204 | RegNet
+  gt=0.54 pred=0.94 | ep1=0.128 ep2=0.149 ep3=0.173 | BayesianNet-2
+  gt=0.85 pred=0.46 | ep1=0.127 ep2=0.145 ep3=0.163 | BayesianNet-3
+  gt=0.81 pred=0.97 | ep1=0.134 ep2=0.242 ep3=0.324 | BayesianNet-2

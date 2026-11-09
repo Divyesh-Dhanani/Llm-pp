@@ -1,0 +1,18 @@
+# Python 3.10 or newer.
+#   python3 -m venv .venv && . .venv/bin/activate
+#   pip install -r requirements.txt
+#
+# Enough for the default run (analysis, tables, figures) and for verify_results.py.
+# The committed results/ were produced with Python 3.12.3, numpy 2.5.3, pandas 2.3.3, scipy 1.18.1,
+# matplotlib 3.11.2 and tabulate 0.10.0.
+numpy>=1.26
+pandas>=2.1
+scipy>=1.11
+matplotlib>=3.8
+tabulate>=0.9
+
+# Stage "baselines" only:
+#   xgboost==3.2.0 scikit-learn   (other XGBoost versions move its R2 by up to 0.008; macOS: brew install libomp)
+#   LC-PFN: torch requests, and a checkout of https://github.com/automl/lcpfn (commit ba892f6) passed as LCPFN=/path
+#           (do not pip-install that checkout: its metadata pins torch<=1.11 and numpy<2)
+# Stage "inputs" and the GPU runs need the patched nn-gpt environment instead (see gpu/README.md).

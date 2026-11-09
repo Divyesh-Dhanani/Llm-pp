@@ -1,0 +1,112 @@
+split held_out_family  n_runs  n_arch                                method  n_seeds      r2  r2_ci_lo  r2_ci_hi    mae  parse_failures
+ main           other     657      15             Qwen3-8B, 3 ep. + proxies        1  0.8006    0.5481    0.8932 0.0662               0
+ main           other     657      15      Qwen3-8B, 3 ep. + proxies + code        1  0.8433    0.6717    0.9074 0.0593               0
+ main           other     657      15           Gemma-2-9B, 3 ep. + proxies        1  0.7852    0.4426    0.9034 0.0732               0
+ main           other     657      15           Gemma-2-9B, 2 ep. + proxies        1  0.6888    0.2728    0.8409 0.0925               0
+ main           other     657      15              XGBoost, 3 ep. + proxies        5  0.8524    0.6928    0.9084 0.0773               0
+ main           other     657      15                        XGBoost, 3 ep.        5  0.8328    0.6357    0.9087 0.0830               0
+ main           other     657      15              XGBoost, 2 ep. + proxies        5  0.8127    0.6085    0.8860 0.0893               0
+ main           other     657      15                         LC-PFN, 3 ep.        1  0.6659    0.2407    0.8249 0.1038               0
+ main           other     657      15                         LC-PFN, 2 ep.        1  0.5720    0.0630    0.7626 0.1275               0
+ main           other     657      15             Per-dataset training mean        1  0.6152    0.1925    0.7754 0.1489               0
+ main           other     657      15 Gemma-2-9B + XGBoost, 3 ep. + proxies        1  0.8562    0.6511    0.9238 0.0657               0
+   tf     transformer     254      35             Qwen3-8B, 3 ep. + proxies        1  0.9173    0.7254    0.9765 0.0459               0
+   tf     transformer     254      35      Qwen3-8B, 3 ep. + proxies + code        1  0.9031    0.7465    0.9719 0.0494               4
+   tf     transformer     254      35           Gemma-2-9B, 3 ep. + proxies        1  0.9003    0.7433    0.9671 0.0517               0
+   tf     transformer     254      35           Gemma-2-9B, 2 ep. + proxies        1  0.8890    0.7268    0.9705 0.0542               0
+   tf     transformer     254      35              XGBoost, 3 ep. + proxies        5  0.9113    0.7863    0.9562 0.0656               0
+   tf     transformer     254      35                        XGBoost, 3 ep.        5  0.9104    0.7391    0.9700 0.0524               0
+   tf     transformer     254      35              XGBoost, 2 ep. + proxies        5  0.8812    0.7306    0.9398 0.0772               0
+   tf     transformer     254      35                         LC-PFN, 3 ep.        1  0.8626    0.5071    0.9327 0.0652               0
+   tf     transformer     254      35                         LC-PFN, 2 ep.        1  0.8387    0.4602    0.9034 0.0810               0
+   tf     transformer     254      35             Per-dataset training mean        1  0.5672    0.0930    0.7132 0.1669               0
+   tf     transformer     254      35 Gemma-2-9B + XGBoost, 3 ep. + proxies        1  0.9219    0.7969    0.9696 0.0558               0
+  rnn             rnn     201       9             Qwen3-8B, 3 ep. + proxies        1  0.9587    0.7741    0.9660 0.0386               0
+  rnn             rnn     201       9      Qwen3-8B, 3 ep. + proxies + code        1  0.8165    0.2749    0.9583 0.0649               0
+  rnn             rnn     201       9           Gemma-2-9B, 3 ep. + proxies        1  0.8702    0.4914    0.9352 0.0569               0
+  rnn             rnn     201       9           Gemma-2-9B, 2 ep. + proxies        1  0.8870    0.5602    0.9345 0.0551               0
+  rnn             rnn     201       9              XGBoost, 3 ep. + proxies        5  0.9677    0.6387    0.9767 0.0404               0
+  rnn             rnn     201       9                        XGBoost, 3 ep.        5  0.9750    0.8395    0.9795 0.0343               0
+  rnn             rnn     201       9              XGBoost, 2 ep. + proxies        5  0.9703    0.7136    0.9774 0.0386               0
+  rnn             rnn     201       9                         LC-PFN, 3 ep.        1  0.7558    0.0359    0.8785 0.0809               0
+  rnn             rnn     201       9                         LC-PFN, 2 ep.        1  0.7233   -0.0921    0.8533 0.0902               0
+  rnn             rnn     201       9             Per-dataset training mean        1  0.6786   -4.2416    0.6869 0.1495               0
+  rnn             rnn     201       9 Gemma-2-9B + XGBoost, 3 ep. + proxies        1  0.9441    0.7723    0.9552 0.0465               0
+  det        detector     145       9           Gemma-2-9B, 3 ep. + proxies        1  0.8411   -0.1349    0.9063 0.0656               0
+  det        detector     145       9           Gemma-2-9B, 2 ep. + proxies        1  0.6481   -1.0954    0.8355 0.0970               0
+  det        detector     145       9              XGBoost, 3 ep. + proxies        5  0.8386   -0.5001    0.8764 0.0695               0
+  det        detector     145       9                        XGBoost, 3 ep.        5  0.8051   -0.2381    0.8518 0.0869               0
+  det        detector     145       9              XGBoost, 2 ep. + proxies        5  0.6628   -0.8289    0.7323 0.0999               0
+  det        detector     145       9                         LC-PFN, 3 ep.        1  0.7758   -1.1967    0.8533 0.0793               0
+  det        detector     145       9                         LC-PFN, 2 ep.        1  0.6712   -1.5537    0.8181 0.0884               0
+  det        detector     145       9             Per-dataset training mean        1  0.0558   -3.5794    0.3385 0.1905               0
+  det        detector     145       9 Gemma-2-9B + XGBoost, 3 ep. + proxies        1  0.8522   -0.2218    0.9066 0.0621               0
+  seg    segmentation    1356      18           Gemma-2-9B, 3 ep. + proxies        1  0.7905    0.7313    0.8322 0.0472               0
+  seg    segmentation    1356      18           Gemma-2-9B, 2 ep. + proxies        1  0.6499    0.5753    0.7029 0.0653               0
+  seg    segmentation    1356      18              XGBoost, 3 ep. + proxies        5  0.3761    0.0516    0.5931 0.1072               0
+  seg    segmentation    1356      18                        XGBoost, 3 ep.        5  0.6233    0.5059    0.7208 0.0708               0
+  seg    segmentation    1356      18              XGBoost, 2 ep. + proxies        5  0.1305   -0.3343    0.4656 0.1223               0
+  seg    segmentation    1356      18                         LC-PFN, 3 ep.        1  0.5567    0.4772    0.6103 0.0746               0
+  seg    segmentation    1356      18                         LC-PFN, 2 ep.        1  0.4904    0.4084    0.5518 0.0819               0
+  seg    segmentation    1356      18             Per-dataset training mean        1 -1.1065   -2.0096   -0.3101 0.1852               0
+  seg    segmentation    1356      18 Gemma-2-9B + XGBoost, 3 ep. + proxies        1  0.7660    0.6762    0.8234 0.0641               0
+
+                     comparison                           A                                     B      scope  n_arch  delta_mae   ci_lo   ci_hi  arch_better_B  wilcoxon_p  holm_p
+            3rd epoch (XGBoost)    XGBoost, 2 ep. + proxies              XGBoost, 3 ep. + proxies all splits      86    -0.0044 -0.0091  0.0005             55      0.0106  0.0848
+            3rd epoch (XGBoost)    XGBoost, 2 ep. + proxies              XGBoost, 3 ep. + proxies       main      15    -0.0078 -0.0153 -0.0004             12      0.0479     NaN
+            3rd epoch (XGBoost)    XGBoost, 2 ep. + proxies              XGBoost, 3 ep. + proxies         tf      35    -0.0026 -0.0085  0.0030             21      0.4510     NaN
+            3rd epoch (XGBoost)    XGBoost, 2 ep. + proxies              XGBoost, 3 ep. + proxies        rnn       9     0.0018 -0.0124  0.0194              3      0.8203     NaN
+            3rd epoch (XGBoost)    XGBoost, 2 ep. + proxies              XGBoost, 3 ep. + proxies        det       9    -0.0051 -0.0259  0.0218              6      0.3594     NaN
+            3rd epoch (XGBoost)    XGBoost, 2 ep. + proxies              XGBoost, 3 ep. + proxies        seg      18    -0.0080 -0.0194  0.0050             13      0.1084     NaN
+             3rd epoch (LC-PFN)               LC-PFN, 2 ep.                         LC-PFN, 3 ep. all splits      86    -0.0136 -0.0203 -0.0065             68      0.0000  0.0001
+             3rd epoch (LC-PFN)               LC-PFN, 2 ep.                         LC-PFN, 3 ep.       main      15    -0.0257 -0.0338 -0.0180             15      0.0001     NaN
+             3rd epoch (LC-PFN)               LC-PFN, 2 ep.                         LC-PFN, 3 ep.         tf      35    -0.0119 -0.0245  0.0015             23      0.0557     NaN
+             3rd epoch (LC-PFN)               LC-PFN, 2 ep.                         LC-PFN, 3 ep.        rnn       9    -0.0071 -0.0215  0.0135              8      0.1289     NaN
+             3rd epoch (LC-PFN)               LC-PFN, 2 ep.                         LC-PFN, 3 ep.        det       9    -0.0041 -0.0288  0.0288              6      0.3594     NaN
+             3rd epoch (LC-PFN)               LC-PFN, 2 ep.                         LC-PFN, 3 ep.        seg      18    -0.0147 -0.0253 -0.0060             16      0.0010     NaN
+         3rd epoch (Gemma-2-9B) Gemma-2-9B, 2 ep. + proxies           Gemma-2-9B, 3 ep. + proxies all splits      86    -0.0016 -0.0112  0.0095             42      0.0894  0.6256
+         3rd epoch (Gemma-2-9B) Gemma-2-9B, 2 ep. + proxies           Gemma-2-9B, 3 ep. + proxies       main      15    -0.0168 -0.0310 -0.0010             12      0.0303     NaN
+         3rd epoch (Gemma-2-9B) Gemma-2-9B, 2 ep. + proxies           Gemma-2-9B, 3 ep. + proxies         tf      35     0.0103 -0.0023  0.0227              8      0.1057     NaN
+         3rd epoch (Gemma-2-9B) Gemma-2-9B, 2 ep. + proxies           Gemma-2-9B, 3 ep. + proxies        rnn       9     0.0018 -0.0003  0.0044              1      0.1875     NaN
+         3rd epoch (Gemma-2-9B) Gemma-2-9B, 2 ep. + proxies           Gemma-2-9B, 3 ep. + proxies        det       9    -0.0229 -0.0509  0.0088              6      0.2188     NaN
+         3rd epoch (Gemma-2-9B) Gemma-2-9B, 2 ep. + proxies           Gemma-2-9B, 3 ep. + proxies        seg      18    -0.0030 -0.0302  0.0380             15      0.0148     NaN
+Gemma-2-9B + XGBoost vs XGBoost    XGBoost, 3 ep. + proxies Gemma-2-9B + XGBoost, 3 ep. + proxies all splits      86    -0.0113 -0.0177 -0.0047             58      0.0007  0.0071
+Gemma-2-9B + XGBoost vs XGBoost    XGBoost, 3 ep. + proxies Gemma-2-9B + XGBoost, 3 ep. + proxies       main      15    -0.0214 -0.0395 -0.0066             14      0.0034     NaN
+Gemma-2-9B + XGBoost vs XGBoost    XGBoost, 3 ep. + proxies Gemma-2-9B + XGBoost, 3 ep. + proxies         tf      35     0.0013 -0.0061  0.0077             15      0.3101     NaN
+Gemma-2-9B + XGBoost vs XGBoost    XGBoost, 3 ep. + proxies Gemma-2-9B + XGBoost, 3 ep. + proxies        rnn       9    -0.0055 -0.0191  0.0052              6      0.5703     NaN
+Gemma-2-9B + XGBoost vs XGBoost    XGBoost, 3 ep. + proxies Gemma-2-9B + XGBoost, 3 ep. + proxies        det       9    -0.0145 -0.0277 -0.0021              7      0.0977     NaN
+Gemma-2-9B + XGBoost vs XGBoost    XGBoost, 3 ep. + proxies Gemma-2-9B + XGBoost, 3 ep. + proxies        seg      18    -0.0286 -0.0450 -0.0060             16      0.0023     NaN
+         source code (Qwen3-8B)   Qwen3-8B, 3 ep. + proxies      Qwen3-8B, 3 ep. + proxies + code all splits      59    -0.0083 -0.0214  0.0051             31      0.1905  0.9526
+         source code (Qwen3-8B)   Qwen3-8B, 3 ep. + proxies      Qwen3-8B, 3 ep. + proxies + code       main      15    -0.0113 -0.0266  0.0015              9      0.1688     NaN
+         source code (Qwen3-8B)   Qwen3-8B, 3 ep. + proxies      Qwen3-8B, 3 ep. + proxies + code         tf      35    -0.0046 -0.0244  0.0153             17      0.6033     NaN
+         source code (Qwen3-8B)   Qwen3-8B, 3 ep. + proxies      Qwen3-8B, 3 ep. + proxies + code        rnn       9    -0.0174 -0.0488  0.0108              5      0.2500     NaN
+            Qwen3-8B vs XGBoost    XGBoost, 3 ep. + proxies             Qwen3-8B, 3 ep. + proxies all splits      59    -0.0025 -0.0193  0.0127             27      0.6078  1.0000
+            Qwen3-8B vs XGBoost    XGBoost, 3 ep. + proxies             Qwen3-8B, 3 ep. + proxies       main      15    -0.0271 -0.0728  0.0088              8      0.6788     NaN
+            Qwen3-8B vs XGBoost    XGBoost, 3 ep. + proxies             Qwen3-8B, 3 ep. + proxies         tf      35     0.0078 -0.0106  0.0251             16      0.2872     NaN
+            Qwen3-8B vs XGBoost    XGBoost, 3 ep. + proxies             Qwen3-8B, 3 ep. + proxies        rnn       9    -0.0018 -0.0320  0.0277              3      1.0000     NaN
+     Qwen3-8B + code vs XGBoost    XGBoost, 3 ep. + proxies      Qwen3-8B, 3 ep. + proxies + code all splits      59    -0.0108 -0.0251  0.0030             31      0.2186  0.9526
+     Qwen3-8B + code vs XGBoost    XGBoost, 3 ep. + proxies      Qwen3-8B, 3 ep. + proxies + code       main      15    -0.0383 -0.0743 -0.0098             12      0.0084     NaN
+     Qwen3-8B + code vs XGBoost    XGBoost, 3 ep. + proxies      Qwen3-8B, 3 ep. + proxies + code         tf      35     0.0031 -0.0122  0.0195             13      0.5014     NaN
+     Qwen3-8B + code vs XGBoost    XGBoost, 3 ep. + proxies      Qwen3-8B, 3 ep. + proxies + code        rnn       9    -0.0191 -0.0473  0.0089              6      0.2500     NaN
+          Gemma-2-9B vs XGBoost    XGBoost, 3 ep. + proxies           Gemma-2-9B, 3 ep. + proxies all splits      86    -0.0114 -0.0243  0.0011             48      0.1486  0.8913
+          Gemma-2-9B vs XGBoost    XGBoost, 3 ep. + proxies           Gemma-2-9B, 3 ep. + proxies       main      15    -0.0268 -0.0664  0.0045              9      0.4887     NaN
+          Gemma-2-9B vs XGBoost    XGBoost, 3 ep. + proxies           Gemma-2-9B, 3 ep. + proxies         tf      35     0.0074 -0.0075  0.0207             12      0.0840     NaN
+          Gemma-2-9B vs XGBoost    XGBoost, 3 ep. + proxies           Gemma-2-9B, 3 ep. + proxies        rnn       9    -0.0065 -0.0345  0.0156              5      0.8203     NaN
+          Gemma-2-9B vs XGBoost    XGBoost, 3 ep. + proxies           Gemma-2-9B, 3 ep. + proxies        det       9    -0.0173 -0.0433  0.0039              7      0.2500     NaN
+          Gemma-2-9B vs XGBoost    XGBoost, 3 ep. + proxies           Gemma-2-9B, 3 ep. + proxies        seg      18    -0.0347 -0.0667  0.0072             15      0.0090     NaN
+         Gemma-2-9B vs Qwen3-8B   Qwen3-8B, 3 ep. + proxies           Gemma-2-9B, 3 ep. + proxies all splits      59    -0.0009 -0.0129  0.0112             32      0.7566  1.0000
+         Gemma-2-9B vs Qwen3-8B   Qwen3-8B, 3 ep. + proxies           Gemma-2-9B, 3 ep. + proxies       main      15     0.0003 -0.0118  0.0132              9      0.6387     NaN
+         Gemma-2-9B vs Qwen3-8B   Qwen3-8B, 3 ep. + proxies           Gemma-2-9B, 3 ep. + proxies         tf      35    -0.0004 -0.0199  0.0183             19      0.9673     NaN
+         Gemma-2-9B vs Qwen3-8B   Qwen3-8B, 3 ep. + proxies           Gemma-2-9B, 3 ep. + proxies        rnn       9    -0.0047 -0.0267  0.0128              4      0.7344     NaN
+              proxies (XGBoost)              XGBoost, 3 ep.              XGBoost, 3 ep. + proxies all splits      86     0.0019 -0.0064  0.0101             43      0.9160  1.0000
+              proxies (XGBoost)              XGBoost, 3 ep.              XGBoost, 3 ep. + proxies       main      15     0.0001 -0.0177  0.0209              8      0.7197     NaN
+              proxies (XGBoost)              XGBoost, 3 ep.              XGBoost, 3 ep. + proxies         tf      35    -0.0073 -0.0184  0.0036             20      0.1736     NaN
+              proxies (XGBoost)              XGBoost, 3 ep.              XGBoost, 3 ep. + proxies        rnn       9     0.0080 -0.0147  0.0324              2      0.3008     NaN
+              proxies (XGBoost)              XGBoost, 3 ep.              XGBoost, 3 ep. + proxies        det       9    -0.0114 -0.0404  0.0183              7      0.3594     NaN
+              proxies (XGBoost)              XGBoost, 3 ep.              XGBoost, 3 ep. + proxies        seg      18     0.0246  0.0055  0.0438              6      0.0237     NaN
+              XGBoost vs LC-PFN               LC-PFN, 3 ep.              XGBoost, 3 ep. + proxies all splits      86    -0.0311 -0.0487 -0.0132             54      0.0010  0.0088
+              XGBoost vs LC-PFN               LC-PFN, 3 ep.              XGBoost, 3 ep. + proxies       main      15    -0.0160 -0.0660  0.0440              9      0.2524     NaN
+              XGBoost vs LC-PFN               LC-PFN, 3 ep.              XGBoost, 3 ep. + proxies         tf      35    -0.0581 -0.0830 -0.0330             27      0.0002     NaN
+              XGBoost vs LC-PFN               LC-PFN, 3 ep.              XGBoost, 3 ep. + proxies        rnn       9    -0.0229 -0.0617  0.0135              5      0.4258     NaN
+              XGBoost vs LC-PFN               LC-PFN, 3 ep.              XGBoost, 3 ep. + proxies        det       9    -0.0473 -0.0940 -0.0048              6      0.1289     NaN
+              XGBoost vs LC-PFN               LC-PFN, 3 ep.              XGBoost, 3 ep. + proxies        seg      18     0.0127 -0.0239  0.0456              7      0.3038     NaN

@@ -1,0 +1,31 @@
+\begin{table*}[!htbp]
+\centering
+\scriptsize
+\caption{Single-seed exploratory runs that preceded the controlled study (Qwen3-8B unless noted; LoRA rank 16, $\alpha = 32$, at most seven epochs; second machine). Not replicated; shown for completeness only.}
+\label{tab:exploratory}
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{llccccc}
+\toprule
+Inputs & Change & Valid & $R^2$ & Pearson $r$ & MAE & best-epoch $R^2$ \\
+\midrule
+2 ep. + code & -- & 651 & 0.519 & 0.799 & 0.127 & $-$1.29 \\
+2 ep. & -- & 657 & 0.750 & 0.887 & 0.078 & $-$0.41 \\
+2 ep. + proxies & reference & 657 & 0.820 & 0.912 & 0.069 & 0.06 \\
+2 ep. + proxies & re-run of the reference & 657 & 0.760 & 0.893 & 0.078 & $-$1.03 \\
+2 ep. + retrieval & 3 similar training architectures & 657 & 0.764 & 0.888 & 0.076 & $-$0.18 \\
+3 ep. & -- & 657 & 0.821 & 0.921 & 0.063 & $-$0.38 \\
+3 ep. + proxies & -- & 657 & 0.821 & 0.914 & 0.065 & $-$0.50 \\
+2 ep. + proxies + Fisher & sixth proxy & 657 & 0.619 & 0.822 & 0.100 & $-$0.54 \\
+2 ep. + proxies (Fisher for depth) & proxy swap & 657 & 0.758 & 0.895 & 0.076 & $-$0.42 \\
+2 ep. + proxies + FLOPs & structural statistic & 657 & 0.777 & 0.898 & 0.075 & $-$0.95 \\
+2 ep. + proxies, chain of thought & templated rationale before answer & 657 & 0.631 & 0.827 & 0.111 & $-$0.25 \\
+2 ep. + proxies & learning rate halved & 657 & 0.762 & 0.892 & 0.080 & $-$0.47 \\
+2 ep. + proxies & LoRA rank 8 & 657 & 0.768 & 0.897 & 0.075 & $-$0.66 \\
+2 ep. + proxies & LoRA $\alpha$ 64 & 657 & 0.759 & 0.892 & 0.074 & $-$0.19 \\
+2 ep. + proxies & warm-up 10\% & 657 & 0.767 & 0.888 & 0.079 & $-$0.28 \\
+2 ep. + proxies & batch size 8 & 657 & 0.769 & 0.894 & 0.080 & $-$0.49 \\
+2 ep. + proxies & Llama-3.1-8B backbone & 657 & 0.722 & 0.874 & 0.086 & $-$0.52 \\
+\bottomrule
+\end{tabular}
+}
+\end{table*}

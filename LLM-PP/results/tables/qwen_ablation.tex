@@ -1,0 +1,27 @@
+\begin{table*}[t]
+\centering
+\footnotesize
+\caption{Input and training ablation (mean\,$\pm$\,SD over seeds 0, 42, 123). \emph{Loss}: over the full chat text or the answer only. \emph{Batch}: per-device batch $\times$ accumulation steps (effective batch 32 throughout). \emph{Data order}: shuffled per seed, or identical for all seeds (every run trained after the switch to an explicit trainer configuration, see the main paper); with a fixed order the seeds differ only in initialisation and dropout, so their SD understates run-to-run variation.}
+\label{tab:qwen-ablation}
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{llllccccc}
+\toprule
+Model & Inputs & Loss & Batch & Data order & $R^2$ & MAE & RMSE & best-epoch $R^2$ \\
+\midrule
+Qwen3-8B & 2 ep. + proxies & full & 4$\times$8 & per seed & 0.737\,$\pm$\,0.011 & 0.080\,$\pm$\,0.002 & 0.158\,$\pm$\,0.003 & $-$0.51 \\
+Qwen3-8B & 2 ep. + proxies + code & full & 1$\times$32 & fixed & 0.728\,$\pm$\,0.041 & 0.082\,$\pm$\,0.006 & 0.161\,$\pm$\,0.012 & $-$0.56 \\
+Qwen3-8B & 3 ep. & full & 4$\times$8 & per seed & 0.773\,$\pm$\,0.045 & 0.070\,$\pm$\,0.005 & 0.147\,$\pm$\,0.014 & $-$0.30 \\
+Qwen3-8B & 3 ep. + proxies & full & 4$\times$8 & per seed & 0.772\,$\pm$\,0.069 & 0.069\,$\pm$\,0.010 & 0.146\,$\pm$\,0.022 & $-$0.41 \\
+Qwen3-8B & 3 ep. + proxies & full & 4$\times$8 & fixed & 0.809\,$\pm$\,0.024 & 0.065\,$\pm$\,0.003 & 0.135\,$\pm$\,0.008 & $-$0.44 \\
+Qwen3-8B & 3 ep. + proxies + code & full & 1$\times$32 & fixed & 0.821\,$\pm$\,0.009 & 0.065\,$\pm$\,0.002 & 0.131\,$\pm$\,0.003 & $-$0.24 \\
+Qwen3-8B & 3 ep. + proxies & answer & 4$\times$8 & per seed & 0.806\,$\pm$\,0.034 & 0.065\,$\pm$\,0.005 & 0.136\,$\pm$\,0.012 & $-$0.14 \\
+Qwen3-8B & 3 ep. + proxies & answer & 4$\times$8 & fixed & 0.818\,$\pm$\,0.010 & 0.061\,$\pm$\,0.005 & 0.132\,$\pm$\,0.004 & $-$0.39 \\
+Qwen3-8B & 3 ep. + proxies & answer & 1$\times$32 & fixed & 0.798\,$\pm$\,0.016 & 0.067\,$\pm$\,0.002 & 0.139\,$\pm$\,0.005 & $-$0.45 \\
+Qwen3-8B & 3 ep. + proxies + code & answer & 1$\times$32 & fixed & 0.841\,$\pm$\,0.004 & 0.059\,$\pm$\,0.000 & 0.123\,$\pm$\,0.002 & $-$0.13 \\
+\midrule
+Llama-3.1-8B & 3 ep. + proxies & full & 4$\times$8 & per seed & 0.769\,$\pm$\,0.084 & 0.079\,$\pm$\,0.014 & 0.147\,$\pm$\,0.026 & $-$0.45 \\
+Llama-3.1-8B & 3 ep. + proxies + code & full & 1$\times$32 & fixed & 0.743\,$\pm$\,0.014 & 0.078\,$\pm$\,0.003 & 0.157\,$\pm$\,0.004 & $-$1.16 \\
+\bottomrule
+\end{tabular}
+}
+\end{table*}

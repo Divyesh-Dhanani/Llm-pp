@@ -1,0 +1,17 @@
+\begin{table*}[t]
+\centering
+\scriptsize
+\caption{Cross-family split (runs per family) and zero-cost proxy coverage (share of runs with the proxy available).}
+\label{tab:split}
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{llccccccc}
+\toprule
+Split & Families & Runs & Architectures & synflow & nwot & grad\_norm & log\_params & depth \\
+\midrule
+train & cnn (3736), segmentation (1356) & 5092 & 976 & 92\% & 98\% & 68\% & 99\% & 99\% \\
+val & detector (145), rnn (201), transformer (254) & 600 & 53 & 24\% & 59\% & 22\% & 100\% & 100\% \\
+test & other (657) & 657 & 15 & 52\% & 43\% & 39\% & 100\% & 100\% \\
+\bottomrule
+\end{tabular}
+}
+\end{table*}

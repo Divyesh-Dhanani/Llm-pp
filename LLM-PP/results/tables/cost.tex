@@ -1,0 +1,26 @@
+\begin{table*}[t]
+\centering
+\footnotesize
+\caption{Wall-clock cost per run on the hardware used (median and range over the timed runs). LLM times include training with early stopping and test inference; the GPU was at times shared with other users' jobs, so they are indicative. $^\dagger$Per-device batch 1 with 32 accumulation steps instead of 4 with 8 (same effective batch).}
+\label{tab:cost}
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{llcc}
+\toprule
+Predictor & Hardware & Time per run & Runs \\
+\midrule
+XGBoost & CPU (8 cores) & 0.8 s & 5 per input set \\
+LC-PFN (pre-trained, inference only) & CPU & 4.7 s & 1 \\
+Qwen3-8B, 3 ep. + proxies & RTX 4090 & 1.7 h (1.7--1.7) & 2 \\
+Llama-3.1-8B, 3 ep. + proxies & RTX 4090 & 1.3 h (1.3--1.6) & 3 \\
+Gemma-2-9B, 3 ep. + proxies & RTX 4090 & 2.0 h (1.9--2.4) & 3 \\
+Qwen3-8B, 3 ep. (no proxies) & RTX 4090 & 1.7 h (1.2--2.4) & 3 \\
+Qwen3-8B, 3 ep. + proxies, answer-only loss & RTX 4090 & 1.4 h (1.4--1.4) & 3 \\
+Qwen3-8B, 3 ep. + proxies, answer-only loss$^\dagger$ & RTX 4090 & 1.9 h (1.8--1.9) & 3 \\
+Qwen3-8B, 2 ep. + proxies + code$^\dagger$ & RTX 4090 & 7.7 h (7.7--7.7) & 3 \\
+Qwen3-8B, 3 ep. + proxies + code$^\dagger$ & RTX 4090 & 7.8 h (7.8--7.8) & 3 \\
+Qwen3-8B, 3 ep. + proxies + code, answer-only loss$^\dagger$ & RTX 4090 & 7.3 h (7.3--7.3) & 3 \\
+Llama-3.1-8B, 3 ep. + proxies + code$^\dagger$ & RTX 4090 & 7.3 h (7.3--7.3) & 3 \\
+\bottomrule
+\end{tabular}
+}
+\end{table*}

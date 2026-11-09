@@ -1,0 +1,73 @@
+\begin{table*}[!htbp]
+\centering
+\scriptsize
+\caption{Every LLM run, per seed.}
+\label{tab:per-seed}
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{llcccccc}
+\toprule
+Model & Inputs & Seed & $R^2$ & Pearson $r$ & MAE & RMSE & best-epoch $R^2$ \\
+\midrule
+Gemma-2-9B & 2 ep. + proxies & 0 & 0.689 & 0.868 & 0.093 & 0.172 & $-$0.57 \\
+Gemma-2-9B & 2 ep. + proxies & 42 & 0.725 & 0.877 & 0.085 & 0.162 & $-$0.70 \\
+Gemma-2-9B & 2 ep. + proxies & 123 & 0.713 & 0.874 & 0.088 & 0.165 & $-$1.29 \\
+\midrule
+Gemma-2-9B & 3 ep. + proxies & 0 & 0.785 & 0.903 & 0.073 & 0.143 & $-$0.45 \\
+Gemma-2-9B & 3 ep. + proxies & 42 & 0.836 & 0.921 & 0.063 & 0.125 & $-$0.19 \\
+Gemma-2-9B & 3 ep. + proxies & 123 & 0.823 & 0.917 & 0.064 & 0.130 & $-$0.20 \\
+\midrule
+Llama-3.1-8B & 2 ep. + proxies & 0 & 0.785 & 0.897 & 0.076 & 0.143 & $-$0.43 \\
+Llama-3.1-8B & 2 ep. + proxies & 42 & 0.761 & 0.886 & 0.080 & 0.151 & $-$0.55 \\
+Llama-3.1-8B & 2 ep. + proxies & 123 & 0.734 & 0.879 & 0.084 & 0.159 & $-$0.52 \\
+\midrule
+Llama-3.1-8B & 3 ep. + proxies & 0 & 0.672 & 0.849 & 0.095 & 0.177 & $-$0.56 \\
+Llama-3.1-8B & 3 ep. + proxies & 42 & 0.819 & 0.913 & 0.069 & 0.132 & $-$0.68 \\
+Llama-3.1-8B & 3 ep. + proxies & 123 & 0.817 & 0.910 & 0.072 & 0.132 & $-$0.11 \\
+\midrule
+Llama-3.1-8B & 3 ep. + proxies + code & 0 & 0.736 & 0.888 & 0.080 & 0.159 & $-$0.87 \\
+Llama-3.1-8B & 3 ep. + proxies + code & 42 & 0.759 & 0.895 & 0.075 & 0.152 & $-$1.03 \\
+Llama-3.1-8B & 3 ep. + proxies + code & 123 & 0.733 & 0.885 & 0.080 & 0.159 & $-$1.56 \\
+\midrule
+Qwen3-8B & 2 ep. + proxies & 0 & 0.728 & 0.875 & 0.080 & 0.161 & $-$0.71 \\
+Qwen3-8B & 2 ep. + proxies & 42 & 0.749 & 0.881 & 0.078 & 0.155 & $-$0.49 \\
+Qwen3-8B & 2 ep. + proxies & 123 & 0.733 & 0.885 & 0.081 & 0.160 & $-$0.32 \\
+\midrule
+Qwen3-8B & 3 ep. & 0 & 0.791 & 0.909 & 0.069 & 0.141 & $-$0.44 \\
+Qwen3-8B & 3 ep. & 42 & 0.806 & 0.912 & 0.065 & 0.136 & $-$0.16 \\
+Qwen3-8B & 3 ep. & 123 & 0.722 & 0.867 & 0.076 & 0.163 & $-$0.30 \\
+\midrule
+Qwen3-8B & 3 ep. + proxies & 0 & 0.795 & 0.905 & 0.069 & 0.140 & $-$0.38 \\
+Qwen3-8B & 3 ep. + proxies & 42 & 0.827 & 0.921 & 0.060 & 0.129 & $-$0.29 \\
+Qwen3-8B & 3 ep. + proxies & 123 & 0.694 & 0.857 & 0.079 & 0.171 & $-$0.55 \\
+\midrule
+Qwen3-8B & 2 ep. + proxies + code & 0 & 0.751 & 0.892 & 0.079 & 0.154 & $-$0.56 \\
+Qwen3-8B & 2 ep. + proxies + code & 42 & 0.751 & 0.887 & 0.079 & 0.154 & $-$0.57 \\
+Qwen3-8B & 2 ep. + proxies + code & 123 & 0.680 & 0.870 & 0.089 & 0.175 & $-$0.55 \\
+\midrule
+Qwen3-8B & 3 ep. + proxies + code & 0 & 0.811 & 0.919 & 0.067 & 0.134 & $-$0.41 \\
+Qwen3-8B & 3 ep. + proxies + code & 42 & 0.828 & 0.923 & 0.064 & 0.128 & $-$0.13 \\
+Qwen3-8B & 3 ep. + proxies + code & 123 & 0.824 & 0.922 & 0.064 & 0.130 & $-$0.18 \\
+\midrule
+Qwen3-8B & 3 ep. + proxies, answer-only loss & 0 & 0.828 & 0.918 & 0.062 & 0.128 & $-$0.05 \\
+Qwen3-8B & 3 ep. + proxies, answer-only loss & 42 & 0.767 & 0.899 & 0.071 & 0.149 & $-$0.27 \\
+Qwen3-8B & 3 ep. + proxies, answer-only loss & 123 & 0.823 & 0.919 & 0.063 & 0.130 & $-$0.09 \\
+\midrule
+Qwen3-8B & 3 ep. + proxies + code, answer-only loss & 0 & 0.843 & 0.928 & 0.059 & 0.122 & $-$0.10 \\
+Qwen3-8B & 3 ep. + proxies + code, answer-only loss & 42 & 0.836 & 0.925 & 0.059 & 0.125 & $-$0.14 \\
+Qwen3-8B & 3 ep. + proxies + code, answer-only loss & 123 & 0.844 & 0.928 & 0.058 & 0.122 & $-$0.14 \\
+\midrule
+Qwen3-8B & 3 ep. + proxies (rerun) & 0 & 0.827 & 0.924 & 0.064 & 0.129 & $-$0.21 \\
+Qwen3-8B & 3 ep. + proxies (rerun) & 42 & 0.819 & 0.917 & 0.062 & 0.132 & $-$0.28 \\
+Qwen3-8B & 3 ep. + proxies (rerun) & 123 & 0.782 & 0.901 & 0.068 & 0.144 & $-$0.84 \\
+\midrule
+Qwen3-8B & 3 ep. + proxies, answer-only loss (rerun) & 0 & 0.828 & 0.921 & 0.058 & 0.128 & $-$0.37 \\
+Qwen3-8B & 3 ep. + proxies, answer-only loss (rerun) & 42 & 0.818 & 0.917 & 0.059 & 0.132 & $-$0.32 \\
+Qwen3-8B & 3 ep. + proxies, answer-only loss (rerun) & 123 & 0.808 & 0.915 & 0.067 & 0.135 & $-$0.47 \\
+\midrule
+Qwen3-8B & 3 ep. + proxies, answer-only loss, batch $1\times32$ & 0 & 0.801 & 0.912 & 0.066 & 0.138 & $-$0.47 \\
+Qwen3-8B & 3 ep. + proxies, answer-only loss, batch $1\times32$ & 42 & 0.781 & 0.904 & 0.069 & 0.145 & $-$0.50 \\
+Qwen3-8B & 3 ep. + proxies, answer-only loss, batch $1\times32$ & 123 & 0.812 & 0.916 & 0.065 & 0.134 & $-$0.36 \\
+\bottomrule
+\end{tabular}
+}
+\end{table*}

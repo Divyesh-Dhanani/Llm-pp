@@ -1,0 +1,72 @@
+\begin{table*}[t]
+\centering
+\scriptsize
+\caption{Best-accuracy prediction on the five held-out families, with cluster-bootstrap CIs over test architectures. Methods as in the held-out family table of the main paper.}
+\label{tab:folds-full}
+\begin{tabular}{lccc}
+\toprule
+Method & $R^2$ & 95\% CI & MAE \\
+\midrule
+\multicolumn{4}{l}{\textit{other (main): 15 architectures, 657 runs}} \\
+\quad Qwen3-8B, 3 ep. + proxies & 0.801 & [0.55, 0.89] & 0.066 \\
+\quad Qwen3-8B, 3 ep. + proxies + code & 0.843 & [0.67, 0.91] & 0.059 \\
+\quad Gemma-2-9B, 2 ep. + proxies & 0.689 & [0.27, 0.84] & 0.093 \\
+\quad Gemma-2-9B, 3 ep. + proxies & 0.785 & [0.44, 0.90] & 0.073 \\
+\quad Gemma-2-9B + XGBoost, 3 ep. + proxies & 0.856 & [0.65, 0.92] & 0.066 \\
+\quad XGBoost, 2 ep. + proxies & 0.813 & [0.61, 0.89] & 0.089 \\
+\quad XGBoost, 3 ep. & 0.833 & [0.64, 0.91] & 0.083 \\
+\quad XGBoost, 3 ep. + proxies & 0.852 & [0.69, 0.91] & 0.077 \\
+\quad LC-PFN, 2 ep. & 0.572 & [0.06, 0.76] & 0.127 \\
+\quad LC-PFN, 3 ep. & 0.666 & [0.24, 0.82] & 0.104 \\
+\quad Per-dataset training mean & 0.615 & [0.19, 0.78] & 0.149 \\
+\midrule
+\multicolumn{4}{l}{\textit{transformer: 35 architectures, 254 runs}} \\
+\quad Qwen3-8B, 3 ep. + proxies & 0.917 & [0.73, 0.98] & 0.046 \\
+\quad Qwen3-8B, 3 ep. + proxies + code & 0.903$^{4}$ & [0.75, 0.97] & 0.049 \\
+\quad Gemma-2-9B, 2 ep. + proxies & 0.889 & [0.73, 0.97] & 0.054 \\
+\quad Gemma-2-9B, 3 ep. + proxies & 0.900 & [0.74, 0.97] & 0.052 \\
+\quad Gemma-2-9B + XGBoost, 3 ep. + proxies & 0.922 & [0.80, 0.97] & 0.056 \\
+\quad XGBoost, 2 ep. + proxies & 0.881 & [0.73, 0.94] & 0.077 \\
+\quad XGBoost, 3 ep. & 0.910 & [0.74, 0.97] & 0.052 \\
+\quad XGBoost, 3 ep. + proxies & 0.911 & [0.79, 0.96] & 0.066 \\
+\quad LC-PFN, 2 ep. & 0.839 & [0.46, 0.90] & 0.081 \\
+\quad LC-PFN, 3 ep. & 0.863 & [0.51, 0.93] & 0.065 \\
+\quad Per-dataset training mean & 0.567 & [0.09, 0.71] & 0.167 \\
+\midrule
+\multicolumn{4}{l}{\textit{rnn: 9 architectures, 201 runs}} \\
+\quad Qwen3-8B, 3 ep. + proxies & 0.959 & [0.77, 0.97] & 0.039 \\
+\quad Qwen3-8B, 3 ep. + proxies + code & 0.816 & [0.27, 0.96] & 0.065 \\
+\quad Gemma-2-9B, 2 ep. + proxies & 0.887 & [0.56, 0.93] & 0.055 \\
+\quad Gemma-2-9B, 3 ep. + proxies & 0.870 & [0.49, 0.94] & 0.057 \\
+\quad Gemma-2-9B + XGBoost, 3 ep. + proxies & 0.944 & [0.77, 0.96] & 0.047 \\
+\quad XGBoost, 2 ep. + proxies & 0.970 & [0.71, 0.98] & 0.039 \\
+\quad XGBoost, 3 ep. & 0.975 & [0.84, 0.98] & 0.034 \\
+\quad XGBoost, 3 ep. + proxies & 0.968 & [0.64, 0.98] & 0.040 \\
+\quad LC-PFN, 2 ep. & 0.723 & [$-$0.09, 0.85] & 0.090 \\
+\quad LC-PFN, 3 ep. & 0.756 & [0.04, 0.88] & 0.081 \\
+\quad Per-dataset training mean & 0.679 & [$-$4.24, 0.69] & 0.149 \\
+\midrule
+\multicolumn{4}{l}{\textit{detector: 9 architectures, 145 runs}} \\
+\quad Gemma-2-9B, 2 ep. + proxies & 0.648 & [$-$1.10, 0.84] & 0.097 \\
+\quad Gemma-2-9B, 3 ep. + proxies & 0.841 & [$-$0.13, 0.91] & 0.066 \\
+\quad Gemma-2-9B + XGBoost, 3 ep. + proxies & 0.852 & [$-$0.22, 0.91] & 0.062 \\
+\quad XGBoost, 2 ep. + proxies & 0.663 & [$-$0.83, 0.73] & 0.100 \\
+\quad XGBoost, 3 ep. & 0.805 & [$-$0.24, 0.85] & 0.087 \\
+\quad XGBoost, 3 ep. + proxies & 0.839 & [$-$0.50, 0.88] & 0.070 \\
+\quad LC-PFN, 2 ep. & 0.671 & [$-$1.55, 0.82] & 0.088 \\
+\quad LC-PFN, 3 ep. & 0.776 & [$-$1.20, 0.85] & 0.079 \\
+\quad Per-dataset training mean & 0.056 & [$-$3.58, 0.34] & 0.191 \\
+\midrule
+\multicolumn{4}{l}{\textit{segmentation: 18 architectures, 1356 runs}} \\
+\quad Gemma-2-9B, 2 ep. + proxies & 0.650 & [0.58, 0.70] & 0.065 \\
+\quad Gemma-2-9B, 3 ep. + proxies & 0.790 & [0.73, 0.83] & 0.047 \\
+\quad Gemma-2-9B + XGBoost, 3 ep. + proxies & 0.766 & [0.68, 0.82] & 0.064 \\
+\quad XGBoost, 2 ep. + proxies & 0.130 & [$-$0.33, 0.47] & 0.122 \\
+\quad XGBoost, 3 ep. & 0.623 & [0.51, 0.72] & 0.071 \\
+\quad XGBoost, 3 ep. + proxies & 0.376 & [0.05, 0.59] & 0.107 \\
+\quad LC-PFN, 2 ep. & 0.490 & [0.41, 0.55] & 0.082 \\
+\quad LC-PFN, 3 ep. & 0.557 & [0.48, 0.61] & 0.075 \\
+\quad Per-dataset training mean & $-$1.107 & [$-$2.01, $-$0.31] & 0.185 \\
+\bottomrule
+\end{tabular}
+\end{table*}

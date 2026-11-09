@@ -1,0 +1,14 @@
+Gemma-2-9B mnist (n=71): pearson=0.658 spearman=0.819; gt range 0.11-0.99, median 0.98
+  pearson without its 3 largest misses: 0.860
+  gt=0.24 pred=0.97 | ep1=0.190 ep2=0.193 ep3=0.204 | RegNet
+  gt=0.85 pred=0.48 | ep1=0.127 ep2=0.145 ep3=0.163 | BayesianNet-3
+  gt=0.11 pred=0.43 | ep1=0.114 ep2=0.114 ep3=0.114 | MobileNetV3
+  gt=0.54 pred=0.73 | ep1=0.128 ep2=0.149 ep3=0.173 | BayesianNet-2
+  gt=0.81 pred=0.98 | ep1=0.134 ep2=0.242 ep3=0.324 | BayesianNet-2
+Qwen3-8B mnist (n=71): pearson=0.149 spearman=0.784; gt range 0.11-0.99, median 0.98
+  pearson without its 3 largest misses: 0.452
+  gt=0.11 pred=0.98 | ep1=0.114 ep2=0.114 ep3=0.114 | MobileNetV3
+  gt=0.24 pred=0.95 | ep1=0.190 ep2=0.193 ep3=0.204 | RegNet
+  gt=0.54 pred=0.94 | ep1=0.128 ep2=0.149 ep3=0.173 | BayesianNet-2
+  gt=0.85 pred=0.46 | ep1=0.127 ep2=0.145 ep3=0.163 | BayesianNet-3
+  gt=0.81 pred=0.97 | ep1=0.134 ep2=0.242 ep3=0.324 | BayesianNet-2

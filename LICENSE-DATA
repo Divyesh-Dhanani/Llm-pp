@@ -1,0 +1,10 @@
+The committed results in LLM-PP/runs/ and LLM-PP/results/ (predictions, metrics, trainer logs, tables and figures)
+are licensed under the Creative Commons Attribution 4.0 International License (CC BY 4.0).
+
+Full license text: https://creativecommons.org/licenses/by/4.0/legalcode
+
+Copyright (c) 2026 Divyesh Rameshbhai Dhanani, Usama Ilyas, Hamza Naseem, Dmitry Ignatov and Radu Timofte
+
+LLM-PP/runs/paper/lemur_export.jsonl.gz is an export of LEMUR training records and network source code from
+ABrain-One/nn-dataset, which is released under the MIT License (Copyright (c) 2024- ABrain One and contributors);
+it is redistributed here under those terms. The base model weights carry their own terms.

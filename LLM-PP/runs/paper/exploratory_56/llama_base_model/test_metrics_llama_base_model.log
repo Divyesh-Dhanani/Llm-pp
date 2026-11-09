@@ -1,0 +1,25 @@
+test_run out/acc_predict/llama_base_model/test_predictions_llama_base_model.csv
+total_samples 657
+valid_predictions 657
+parse_failures 0
+best_accuracy_RMSE 0.1627
+best_accuracy_MAE 0.0860
+best_accuracy_Pearson_r 0.8735
+best_accuracy_Spearman_r 0.8769
+best_accuracy_R2 0.7224
+best_epoch_RMSE 17.2365
+best_epoch_MAE 10.1431
+best_epoch_Pearson_r 0.4250
+best_epoch_Spearman_r 0.1379
+best_epoch_R2 -0.5158
+
+per_dataset_best_accuracy (dataset n pearson_r spearman_r r2 rmse mae [low_n]):
+  celeba-gender 55 0.8736 0.8303 0.7090 0.0802 0.0371
+  cifar-10 73 0.8362 0.8331 0.6918 0.1198 0.0966
+  cifar-100 53 0.7585 0.7894 0.3215 0.1276 0.0977
+  coco 133 0.8955 0.8763 0.3921 0.0621 0.0427
+  imagenette 44 0.6038 0.6013 -0.0144 0.1269 0.0907
+  mnist 71 0.0796 0.3223 -0.3729 0.1701 0.0559
+  places365 15 0.7690 0.7283 0.3717 0.0634 0.0500
+  svhn 70 0.6413 0.6882 -0.0179 0.3131 0.1809
+  wikitext 143 0.6809 0.8425 -0.1801 0.1856 0.1060

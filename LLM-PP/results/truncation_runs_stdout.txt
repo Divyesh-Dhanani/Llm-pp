@@ -1,0 +1,9 @@
+                                        r2           mae       
+                                      mean    std   mean    std
+arm       training                                             
+code2p    truncated to 1,024 tokens  0.511  0.079  0.124  0.011
+          full sequences             0.728  0.041  0.082  0.006
+code3p    truncated to 1,024 tokens  0.692  0.055  0.098  0.011
+          full sequences             0.821  0.009  0.065  0.002
+code3p_ro truncated to 1,024 tokens  0.698  0.018  0.092  0.007
+          full sequences             0.841  0.004  0.059  0.000

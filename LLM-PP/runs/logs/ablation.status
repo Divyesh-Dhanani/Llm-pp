@@ -1,0 +1,162 @@
+Sun Oct 11 18:42:20 CEST 2026 WAIT-GPU code3p qwen3-8b seed0
+Sun Oct 11 18:43:20 CEST 2026 START code3p qwen3-8b seed0
+Sun Oct 11 22:15:53 CEST 2026 END code3p qwen3-8b seed0 EXIT_CODE=0
+Sun Oct 11 22:15:53 CEST 2026 WAIT-GPU code3p qwen3-8b seed42
+Sun Oct 11 22:16:53 CEST 2026 START code3p qwen3-8b seed42
+Mon Oct 12 01:49:20 CEST 2026 END code3p qwen3-8b seed42 EXIT_CODE=0
+Mon Oct 12 01:49:21 CEST 2026 WAIT-GPU code3p qwen3-8b seed123
+Mon Oct 12 01:50:21 CEST 2026 START code3p qwen3-8b seed123
+Mon Oct 12 05:22:55 CEST 2026 END code3p qwen3-8b seed123 EXIT_CODE=0
+Mon Oct 12 05:22:55 CEST 2026 WAIT-GPU code2p qwen3-8b seed0
+Mon Oct 12 05:23:55 CEST 2026 START code2p qwen3-8b seed0
+Mon Oct 12 08:56:06 CEST 2026 END code2p qwen3-8b seed0 EXIT_CODE=0
+Mon Oct 12 08:56:06 CEST 2026 WAIT-GPU code2p qwen3-8b seed42
+Mon Oct 12 08:57:06 CEST 2026 START code2p qwen3-8b seed42
+Mon Oct 12 12:28:49 CEST 2026 END code2p qwen3-8b seed42 EXIT_CODE=0
+Mon Oct 12 12:28:49 CEST 2026 WAIT-GPU code2p qwen3-8b seed123
+Mon Oct 12 12:29:49 CEST 2026 START code2p qwen3-8b seed123
+Mon Oct 12 16:41:43 CEST 2026 END code2p qwen3-8b seed123 EXIT_CODE=0
+Mon Oct 12 16:41:43 CEST 2026 WAIT-GPU e3np qwen3-8b seed0
+Mon Oct 12 16:42:43 CEST 2026 START e3np qwen3-8b seed0
+Mon Oct 12 18:23:47 CEST 2026 END e3np qwen3-8b seed0 EXIT_CODE=0
+Mon Oct 12 18:23:47 CEST 2026 WAIT-GPU e3np qwen3-8b seed42
+Mon Oct 12 18:24:47 CEST 2026 START e3np qwen3-8b seed42
+Mon Oct 12 20:49:49 CEST 2026 END e3np qwen3-8b seed42 EXIT_CODE=0
+Mon Oct 12 20:49:49 CEST 2026 WAIT-GPU e3np qwen3-8b seed123
+Mon Oct 12 20:50:49 CEST 2026 START e3np qwen3-8b seed123
+Mon Oct 12 22:02:29 CEST 2026 END e3np qwen3-8b seed123 EXIT_CODE=0
+Mon Oct 12 22:02:29 CEST 2026 QUEUE DONE qwen3-8b code3p:0 code3p:42 code3p:123 code2p:0 code2p:42 code2p:123 e3np:0 e3np:42 e3np:123
+--- answer-only loss add-on Tue Oct 13 12:09:18 CEST 2026
+Tue Oct 13 12:09:18 CEST 2026 WAIT-GPU e3p_ro qwen3-8b seed0
+Tue Oct 13 12:10:18 CEST 2026 START e3p_ro qwen3-8b seed0
+Tue Oct 13 13:33:38 CEST 2026 END e3p_ro qwen3-8b seed0 EXIT_CODE=0
+Tue Oct 13 13:33:38 CEST 2026 WAIT-GPU e3p_ro qwen3-8b seed42
+Tue Oct 13 13:34:38 CEST 2026 START e3p_ro qwen3-8b seed42
+Tue Oct 13 14:57:53 CEST 2026 END e3p_ro qwen3-8b seed42 EXIT_CODE=0
+Tue Oct 13 14:57:53 CEST 2026 WAIT-GPU e3p_ro qwen3-8b seed123
+Tue Oct 13 14:58:53 CEST 2026 START e3p_ro qwen3-8b seed123
+Tue Oct 13 16:22:11 CEST 2026 END e3p_ro qwen3-8b seed123 EXIT_CODE=0
+Tue Oct 13 16:22:11 CEST 2026 WAIT-GPU code3p_ro qwen3-8b seed0
+Tue Oct 13 16:23:11 CEST 2026 START code3p_ro qwen3-8b seed0
+Tue Oct 13 17:39:30 CEST 2026 END code3p_ro qwen3-8b seed0 EXIT_CODE=0
+Tue Oct 13 17:39:30 CEST 2026 WAIT-GPU code3p_ro qwen3-8b seed42
+Tue Oct 13 17:40:30 CEST 2026 START code3p_ro qwen3-8b seed42
+Tue Oct 13 18:54:45 CEST 2026 END code3p_ro qwen3-8b seed42 EXIT_CODE=0
+Tue Oct 13 18:54:45 CEST 2026 WAIT-GPU code3p_ro qwen3-8b seed123
+Tue Oct 13 18:55:45 CEST 2026 START code3p_ro qwen3-8b seed123
+Tue Oct 13 20:08:31 CEST 2026 END code3p_ro qwen3-8b seed123 EXIT_CODE=0
+Tue Oct 13 20:08:31 CEST 2026 QUEUE DONE qwen3-8b e3p_ro:0 e3p_ro:42 e3p_ro:123 code3p_ro:0 code3p_ro:42 code3p_ro:123
+--- code reruns with fixed max_length=6144 Mon Oct 19 00:54:30 CEST 2026
+Mon Oct 19 00:54:30 CEST 2026 WAIT-GPU code3p qwen3-8b seed0
+Mon Oct 19 01:45:31 CEST 2026 START code3p qwen3-8b seed0
+Mon Oct 19 09:32:56 CEST 2026 END code3p qwen3-8b seed0 EXIT_CODE=0
+Mon Oct 19 09:32:56 CEST 2026 WAIT-GPU code3p qwen3-8b seed42
+Mon Oct 19 09:33:56 CEST 2026 START code3p qwen3-8b seed42
+Mon Oct 19 17:23:21 CEST 2026 END code3p qwen3-8b seed42 EXIT_CODE=0
+Mon Oct 19 17:23:21 CEST 2026 WAIT-GPU code3p qwen3-8b seed123
+Mon Oct 19 17:24:21 CEST 2026 START code3p qwen3-8b seed123
+Tue Oct 20 01:09:34 CEST 2026 END code3p qwen3-8b seed123 EXIT_CODE=0
+Tue Oct 20 01:09:34 CEST 2026 WAIT-GPU code3p_ro qwen3-8b seed0
+Tue Oct 20 01:10:34 CEST 2026 START code3p_ro qwen3-8b seed0
+Tue Oct 20 08:29:50 CEST 2026 END code3p_ro qwen3-8b seed0 EXIT_CODE=0
+Tue Oct 20 08:29:50 CEST 2026 WAIT-GPU code3p_ro qwen3-8b seed42
+Tue Oct 20 08:30:50 CEST 2026 START code3p_ro qwen3-8b seed42
+Tue Oct 20 15:49:43 CEST 2026 END code3p_ro qwen3-8b seed42 EXIT_CODE=0
+Tue Oct 20 15:49:43 CEST 2026 WAIT-GPU code3p_ro qwen3-8b seed123
+Tue Oct 20 15:50:43 CEST 2026 START code3p_ro qwen3-8b seed123
+Tue Oct 20 23:09:49 CEST 2026 END code3p_ro qwen3-8b seed123 EXIT_CODE=0
+Tue Oct 20 23:09:49 CEST 2026 WAIT-GPU code2p qwen3-8b seed0
+Tue Oct 20 23:10:49 CEST 2026 START code2p qwen3-8b seed0
+Wed Oct 21 06:50:58 CEST 2026 END code2p qwen3-8b seed0 EXIT_CODE=0
+Wed Oct 21 06:50:58 CEST 2026 WAIT-GPU code2p qwen3-8b seed42
+Wed Oct 21 06:51:58 CEST 2026 START code2p qwen3-8b seed42
+Wed Oct 21 14:31:25 CEST 2026 END code2p qwen3-8b seed42 EXIT_CODE=0
+Wed Oct 21 14:31:25 CEST 2026 WAIT-GPU code2p qwen3-8b seed123
+Wed Oct 21 14:32:25 CEST 2026 START code2p qwen3-8b seed123
+Wed Oct 21 22:12:31 CEST 2026 END code2p qwen3-8b seed123 EXIT_CODE=0
+Wed Oct 21 22:12:31 CEST 2026 QUEUE DONE qwen3-8b code3p:0 code3p:42 code3p:123 code3p_ro:0 code3p_ro:42 code3p_ro:123 code2p:0 code2p:42 code2p:123
+--- final round (A1, A3, B3, B2) Tue Oct 27 13:52:54 CET 2026
+Tue Oct 27 13:52:54 CET 2026 WAIT-GPU e3p_ro_b1 qwen3-8b seed0
+Tue Oct 27 13:53:54 CET 2026 START e3p_ro_b1 qwen3-8b seed0
+Tue Oct 27 15:44:59 CET 2026 END e3p_ro_b1 qwen3-8b seed0 EXIT_CODE=0
+Tue Oct 27 15:44:59 CET 2026 WAIT-GPU e3p_ro_b1 qwen3-8b seed42
+Tue Oct 27 15:45:59 CET 2026 START e3p_ro_b1 qwen3-8b seed42
+Tue Oct 27 17:36:17 CET 2026 END e3p_ro_b1 qwen3-8b seed42 EXIT_CODE=0
+Tue Oct 27 17:36:17 CET 2026 WAIT-GPU e3p_ro_b1 qwen3-8b seed123
+Tue Oct 27 17:37:17 CET 2026 START e3p_ro_b1 qwen3-8b seed123
+Tue Oct 27 19:28:48 CET 2026 END e3p_ro_b1 qwen3-8b seed123 EXIT_CODE=0
+Tue Oct 27 19:28:48 CET 2026 QUEUE DONE qwen3-8b e3p_ro_b1:0 e3p_ro_b1:42 e3p_ro_b1:123
+Tue Oct 27 19:28:48 CET 2026 WAIT-GPU e3p_all qwen3-8b seed0
+Tue Oct 27 19:29:48 CET 2026 START e3p_all qwen3-8b seed0
+Tue Oct 27 22:27:04 CET 2026 END e3p_all qwen3-8b seed0 EXIT_CODE=0
+Tue Oct 27 22:27:04 CET 2026 WAIT-GPU e3p_all qwen3-8b seed42
+Tue Oct 27 22:28:05 CET 2026 START e3p_all qwen3-8b seed42
+Wed Oct 28 02:06:11 CET 2026 END e3p_all qwen3-8b seed42 EXIT_CODE=0
+Wed Oct 28 02:06:11 CET 2026 WAIT-GPU e3p_all qwen3-8b seed123
+Wed Oct 28 02:07:11 CET 2026 START e3p_all qwen3-8b seed123
+Wed Oct 28 06:25:43 CET 2026 END e3p_all qwen3-8b seed123 EXIT_CODE=0
+Wed Oct 28 06:25:43 CET 2026 WAIT-GPU e3p_ro_all qwen3-8b seed0
+Wed Oct 28 06:26:43 CET 2026 START e3p_ro_all qwen3-8b seed0
+Wed Oct 28 10:01:53 CET 2026 END e3p_ro_all qwen3-8b seed0 EXIT_CODE=0
+Wed Oct 28 10:01:53 CET 2026 WAIT-GPU e3p_ro_all qwen3-8b seed42
+Wed Oct 28 10:02:53 CET 2026 START e3p_ro_all qwen3-8b seed42
+Wed Oct 28 13:37:56 CET 2026 END e3p_ro_all qwen3-8b seed42 EXIT_CODE=0
+Wed Oct 28 13:37:56 CET 2026 WAIT-GPU e3p_ro_all qwen3-8b seed123
+Wed Oct 28 13:38:56 CET 2026 START e3p_ro_all qwen3-8b seed123
+Wed Oct 28 16:33:35 CET 2026 END e3p_ro_all qwen3-8b seed123 EXIT_CODE=0
+Wed Oct 28 16:33:35 CET 2026 QUEUE DONE qwen3-8b e3p_all:0 e3p_all:42 e3p_all:123 e3p_ro_all:0 e3p_ro_all:42 e3p_ro_all:123
+Wed Oct 28 16:33:35 CET 2026 WAIT-GPU code3p llama3.1-8b seed0
+Wed Oct 28 16:34:35 CET 2026 START code3p llama3.1-8b seed0
+Wed Oct 28 23:50:36 CET 2026 END code3p llama3.1-8b seed0 EXIT_CODE=0
+Wed Oct 28 23:50:36 CET 2026 WAIT-GPU code3p llama3.1-8b seed42
+Wed Oct 28 23:51:36 CET 2026 START code3p llama3.1-8b seed42
+Thu Oct 29 07:08:03 CET 2026 END code3p llama3.1-8b seed42 EXIT_CODE=0
+Thu Oct 29 07:08:03 CET 2026 WAIT-GPU code3p llama3.1-8b seed123
+Thu Oct 29 07:09:03 CET 2026 START code3p llama3.1-8b seed123
+Thu Oct 29 14:26:36 CET 2026 END code3p llama3.1-8b seed123 EXIT_CODE=0
+Thu Oct 29 14:26:36 CET 2026 QUEUE DONE llama3.1-8b code3p:0 code3p:42 code3p:123
+Thu Oct 29 14:26:36 CET 2026 WAIT-GPU e3p_ro_b1@tf qwen3-8b seed0
+Thu Oct 29 14:27:36 CET 2026 START e3p_ro_b1@tf qwen3-8b seed0
+Thu Oct 29 16:48:38 CET 2026 END e3p_ro_b1@tf qwen3-8b seed0 EXIT_CODE=0
+Thu Oct 29 16:48:38 CET 2026 WAIT-GPU code3p_ro@tf qwen3-8b seed0
+Thu Oct 29 16:49:38 CET 2026 START code3p_ro@tf qwen3-8b seed0
+Fri Oct 30 02:13:22 CET 2026 END code3p_ro@tf qwen3-8b seed0 EXIT_CODE=0
+Fri Oct 30 02:13:22 CET 2026 QUEUE DONE qwen3-8b fold=tf e3p_ro_b1:0 code3p_ro:0
+Fri Oct 30 02:13:22 CET 2026 WAIT-GPU e3p@tf gemma2-9b seed0
+Fri Oct 30 02:14:22 CET 2026 START e3p@tf gemma2-9b seed0
+Fri Oct 30 04:10:17 CET 2026 END e3p@tf gemma2-9b seed0 EXIT_CODE=0
+Fri Oct 30 04:10:17 CET 2026 QUEUE DONE gemma2-9b fold=tf e3p:0
+Fri Oct 30 04:10:17 CET 2026 WAIT-GPU e3p_ro_b1@rnn qwen3-8b seed0
+Fri Oct 30 04:11:17 CET 2026 START e3p_ro_b1@rnn qwen3-8b seed0
+Fri Oct 30 06:30:14 CET 2026 END e3p_ro_b1@rnn qwen3-8b seed0 EXIT_CODE=0
+Fri Oct 30 06:30:14 CET 2026 WAIT-GPU code3p_ro@rnn qwen3-8b seed0
+Fri Oct 30 06:31:14 CET 2026 START code3p_ro@rnn qwen3-8b seed0
+Fri Oct 30 13:54:37 CET 2026 END code3p_ro@rnn qwen3-8b seed0 EXIT_CODE=0
+Fri Oct 30 13:54:37 CET 2026 QUEUE DONE qwen3-8b fold=rnn e3p_ro_b1:0 code3p_ro:0
+Fri Oct 30 13:54:37 CET 2026 WAIT-GPU e3p@rnn gemma2-9b seed0
+Fri Oct 30 13:55:37 CET 2026 START e3p@rnn gemma2-9b seed0
+Fri Oct 30 16:16:46 CET 2026 END e3p@rnn gemma2-9b seed0 EXIT_CODE=0
+Fri Oct 30 16:16:46 CET 2026 QUEUE DONE gemma2-9b fold=rnn e3p:0
+--- final round DONE Fri Oct 30 16:16:46 CET 2026
+Wed Nov  4 16:51:21 CET 2026 WAIT-GPU e2p@tf gemma2-9b seed0
+Wed Nov  4 16:52:21 CET 2026 START e2p@tf gemma2-9b seed0
+Wed Nov  4 18:42:15 CET 2026 END e2p@tf gemma2-9b seed0 EXIT_CODE=0
+Wed Nov  4 18:42:15 CET 2026 QUEUE DONE gemma2-9b fold=tf e2p:0
+Wed Nov  4 18:42:15 CET 2026 WAIT-GPU e2p@rnn gemma2-9b seed0
+Wed Nov  4 18:43:15 CET 2026 START e2p@rnn gemma2-9b seed0
+Wed Nov  4 20:57:13 CET 2026 END e2p@rnn gemma2-9b seed0 EXIT_CODE=0
+Wed Nov  4 20:57:13 CET 2026 QUEUE DONE gemma2-9b fold=rnn e2p:0
+Wed Nov  4 20:57:13 CET 2026 WAIT-GPU e2p@det gemma2-9b seed0
+Wed Nov  4 20:58:14 CET 2026 START e2p@det gemma2-9b seed0
+Wed Nov  4 23:10:59 CET 2026 END e2p@det gemma2-9b seed0 EXIT_CODE=0
+Wed Nov  4 23:10:59 CET 2026 WAIT-GPU e3p@det gemma2-9b seed0
+Wed Nov  4 23:11:59 CET 2026 START e3p@det gemma2-9b seed0
+Thu Nov  5 01:30:34 CET 2026 END e3p@det gemma2-9b seed0 EXIT_CODE=0
+Thu Nov  5 01:30:34 CET 2026 QUEUE DONE gemma2-9b fold=det e2p:0 e3p:0
+Thu Nov  5 01:30:34 CET 2026 WAIT-GPU e2p@seg gemma2-9b seed0
+Thu Nov  5 01:31:34 CET 2026 START e2p@seg gemma2-9b seed0
+Thu Nov  5 03:29:24 CET 2026 END e2p@seg gemma2-9b seed0 EXIT_CODE=0
+Thu Nov  5 03:29:24 CET 2026 WAIT-GPU e3p@seg gemma2-9b seed0
+Thu Nov  5 03:30:24 CET 2026 START e3p@seg gemma2-9b seed0
+Thu Nov  5 05:32:30 CET 2026 END e3p@seg gemma2-9b seed0 EXIT_CODE=0
+Thu Nov  5 05:32:30 CET 2026 QUEUE DONE gemma2-9b fold=seg e2p:0 e3p:0

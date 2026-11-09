@@ -1,0 +1,25 @@
+test_run out/acc_predict_ablation/code3p/Meta-Llama-3.1-8B-Instruct-bnb-4bit_seed42/test_predictions.csv
+total_samples 657
+valid_predictions 657
+parse_failures 0
+best_accuracy_RMSE 0.1517
+best_accuracy_MAE 0.0755
+best_accuracy_Pearson_r 0.8947
+best_accuracy_Spearman_r 0.8960
+best_accuracy_R2 0.7588
+best_epoch_RMSE 19.9693
+best_epoch_MAE 12.0685
+best_epoch_Pearson_r 0.4299
+best_epoch_Spearman_r 0.4508
+best_epoch_R2 -1.0345
+
+per_dataset_best_accuracy (dataset n pearson_r spearman_r r2 rmse mae [low_n]):
+  celeba-gender 55 0.8989 0.9116 0.7501 0.0743 0.0378
+  cifar-10 73 0.8329 0.8203 0.6719 0.1236 0.0870
+  cifar-100 53 0.7159 0.7297 0.1379 0.1438 0.1128
+  coco 133 0.9291 0.9311 0.8201 0.0338 0.0197
+  imagenette 44 0.4313 0.3821 -0.4423 0.1513 0.1243
+  mnist 71 0.5734 0.7661 -0.7858 0.1941 0.0790
+  places365 15 0.7291 0.6559 -0.6380 0.1024 0.0720
+  svhn 70 0.7735 0.7126 0.3964 0.2411 0.1304
+  wikitext 143 0.7032 0.8422 -0.0865 0.1781 0.0789

@@ -1,0 +1,10 @@
+dataset,n,tau,top5_recall,selection_regret,method
+celeba-gender,55,0.7805666264309267,1.0,0.0,"Ensemble: 3 LLMs + XGBoost, e3+P"
+cifar-10,73,0.7083632154272498,0.8,0.020000000000000018,"Ensemble: 3 LLMs + XGBoost, e3+P"
+cifar-100,53,0.6828402259217294,0.8,0.030000000000000027,"Ensemble: 3 LLMs + XGBoost, e3+P"
+coco,133,0.8347633313590622,0.6,0.010000000000000009,"Ensemble: 3 LLMs + XGBoost, e3+P"
+imagenette,44,0.40814295206229484,0.8,0.06999999999999995,"Ensemble: 3 LLMs + XGBoost, e3+P"
+mnist,71,0.6918910132589644,1.0,0.0,"Ensemble: 3 LLMs + XGBoost, e3+P"
+places365,15,0.7026480525229439,0.8,0.0,"Ensemble: 3 LLMs + XGBoost, e3+P"
+svhn,70,0.5908265984524339,0.8,0.0,"Ensemble: 3 LLMs + XGBoost, e3+P"
+wikitext,143,0.8423473822269423,1.0,0.0,"Ensemble: 3 LLMs + XGBoost, e3+P"

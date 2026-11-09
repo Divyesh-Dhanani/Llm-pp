@@ -1,0 +1,21 @@
+\begin{table*}[t]
+\centering
+\small
+\caption{Per-dataset best-accuracy $R^2$ (3 ep.\ + proxies unless marked; LLMs averaged over seeds). \emph{Arch.} is the number of distinct test architectures behind each dataset: coco and wikitext are a single architecture each, and places365 has only 15 runs. The Qwen and Qwen+code columns come from different data-order regimes (\cref{tab:qwen-ablation}) and are not a matched comparison.}
+\label{tab:per-dataset}
+\begin{tabular}{lcccccccc}
+\toprule
+Dataset & $n$ & Arch. & XGB & Qwen & Llama & Gemma & Qwen+code & Ens. \\
+\midrule
+celeba-gender & 55 & 11 & 0.75 & 0.45 & 0.61 & 0.88 & 0.79 & 0.87 \\
+cifar-10 & 73 & 11 & 0.68 & 0.72 & 0.71 & 0.75 & 0.70 & 0.77 \\
+cifar-100 & 53 & 10 & 0.61 & 0.54 & 0.54 & 0.63 & 0.45 & 0.67 \\
+coco & 133 & 1 & 0.66 & 0.92 & 0.65 & 0.90 & 0.91 & 0.88 \\
+imagenette & 44 & 10 & 0.20 & $-$0.08 & $-$0.16 & $-$0.09 & $-$0.69 & 0.10 \\
+mnist & 71 & 9 & 0.00 & $-$0.20 & $-$0.17 & 0.13 & 0.42 & 0.31 \\
+places365 & 15 & 9 & $-$0.29 & 0.43 & 0.10 & 0.47 & 0.50 & 0.50 \\
+svhn & 70 & 11 & 0.59 & $-$0.06 & $-$0.05 & 0.45 & 0.26 & 0.52 \\
+wikitext & 143 & 1 & 0.48 & 0.47 & 0.43 & $-$0.01 & 0.50 & 0.51 \\
+\bottomrule
+\end{tabular}
+\end{table*}

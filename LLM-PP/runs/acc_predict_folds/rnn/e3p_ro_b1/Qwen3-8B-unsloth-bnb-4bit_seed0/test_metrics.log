@@ -1,0 +1,20 @@
+test_run out/acc_predict_folds/rnn/e3p_ro_b1/Qwen3-8B-unsloth-bnb-4bit_seed0/test_predictions.csv
+total_samples 201
+valid_predictions 201
+parse_failures 0
+best_accuracy_RMSE 0.0637
+best_accuracy_MAE 0.0386
+best_accuracy_Pearson_r 0.9841
+best_accuracy_Spearman_r 0.9488
+best_accuracy_R2 0.9587
+best_epoch_RMSE 18.5593
+best_epoch_MAE 9.6716
+best_epoch_Pearson_r 0.5810
+best_epoch_Spearman_r 0.7504
+best_epoch_R2 0.0016
+
+per_dataset_best_accuracy (dataset n pearson_r spearman_r r2 rmse mae [low_n]):
+  cifar-10 4 0.7488 0.9487 -0.1591 0.1409 0.1250 low_n
+  coco 97 0.8647 0.6133 0.6610 0.0301 0.0203
+  imagenette 1 nan nan nan 0.0700 0.0700 low_n
+  wikitext 99 0.9549 0.9632 0.7970 0.0806 0.0527

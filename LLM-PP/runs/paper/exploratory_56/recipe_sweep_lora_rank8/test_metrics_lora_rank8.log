@@ -1,0 +1,25 @@
+test_run out/acc_predict/recipe_sweep_lora_rank8/test_predictions_lora_rank8.csv
+total_samples 657
+valid_predictions 657
+parse_failures 0
+best_accuracy_RMSE 0.1488
+best_accuracy_MAE 0.0753
+best_accuracy_Pearson_r 0.8972
+best_accuracy_Spearman_r 0.9036
+best_accuracy_R2 0.7678
+best_epoch_RMSE 18.0168
+best_epoch_MAE 10.8189
+best_epoch_Pearson_r 0.3887
+best_epoch_Spearman_r 0.2375
+best_epoch_R2 -0.6561
+
+per_dataset_best_accuracy (dataset n pearson_r spearman_r r2 rmse mae [low_n]):
+  celeba-gender 55 0.8535 0.8453 0.6793 0.0842 0.0411
+  cifar-10 73 0.8214 0.8189 0.5758 0.1406 0.1029
+  cifar-100 53 0.6957 0.7029 0.3945 0.1205 0.0925
+  coco 133 0.9527 0.9254 0.8595 0.0298 0.0232
+  imagenette 44 0.5583 0.5889 -0.3110 0.1442 0.1155
+  mnist 71 0.7390 0.7366 0.4822 0.1045 0.0325
+  places365 15 0.8092 0.7432 0.3081 0.0665 0.0520
+  svhn 70 0.6512 0.7101 0.0065 0.3094 0.1827
+  wikitext 143 0.7261 0.8708 0.1934 0.1535 0.0750

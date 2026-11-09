@@ -1,0 +1,21 @@
+effect,subset,delta_r2,delta_mae
+"source code, Qwen3-8B (3 ep., answer-only)",all 15 architectures,0.043007041687104786,-0.008031456113647896
+"source code, Qwen3-8B (3 ep., answer-only)",without RNN (WikiText),0.044825538418468924,-0.010226977950713347
+"source code, Qwen3-8B (3 ep., answer-only)",without ResNet-LSTM (COCO),0.07391742029555182,-0.010502544529262081
+"source code, Qwen3-8B (3 ep., answer-only)",without both,0.0780246606129319,-0.014391951006124254
+"3rd epoch, Gemma-2-9B",all 15 architectures,0.1058424094193322,-0.021882293252156265
+"3rd epoch, Gemma-2-9B",without RNN (WikiText),0.08498480641654904,-0.017133592736705568
+"3rd epoch, Gemma-2-9B",without ResNet-LSTM (COCO),0.18019253966629611,-0.026819338422391856
+"3rd epoch, Gemma-2-9B",without both,0.1462066216357888,-0.022265966754155708
+"3rd epoch, Qwen3-8B",all 15 architectures,0.03522564612508128,-0.010035514967021819
+"3rd epoch, Qwen3-8B",without RNN (WikiText),0.018419769858284418,-0.007282749675745798
+"3rd epoch, Qwen3-8B",without ResNet-LSTM (COCO),0.05940223374691478,-0.011475826972010175
+"3rd epoch, Qwen3-8B",without both,0.03093522731440146,-0.008302712160979858
+Gemma-2-9B vs XGBoost (e3+P),all 15 architectures,-0.03760284586870988,-0.010739547721156775
+Gemma-2-9B vs XGBoost (e3+P),without RNN (WikiText),-0.005220801405548037,-0.017347806673411147
+Gemma-2-9B vs XGBoost (e3+P),without ResNet-LSTM (COCO),-0.06984950210847207,-0.010463037809033085
+Gemma-2-9B vs XGBoost (e3+P),without both,-0.015290116116117303,-0.019274334879965008
+Ensemble vs XGBoost (e3+P),all 15 architectures,0.012495960525196415,-0.015848803032470826
+Ensemble vs XGBoost (e3+P),without RNN (WikiText),0.011655747543869444,-0.01293070840142671
+Ensemble vs XGBoost (e3+P),without ResNet-LSTM (COCO),0.01633730791439969,-0.017214026685146308
+Ensemble vs XGBoost (e3+P),without both,0.014491419554591989,-0.013789686375371826

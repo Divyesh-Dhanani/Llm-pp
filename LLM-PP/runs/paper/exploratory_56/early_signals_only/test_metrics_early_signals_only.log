@@ -1,0 +1,25 @@
+test_run out/acc_predict/early_signals_only/test_predictions_early_signals_only.csv
+total_samples 657
+valid_predictions 657
+parse_failures 0
+best_accuracy_RMSE 0.1543
+best_accuracy_MAE 0.0779
+best_accuracy_Pearson_r 0.8875
+best_accuracy_Spearman_r 0.8955
+best_accuracy_R2 0.7504
+best_epoch_RMSE 16.6197
+best_epoch_MAE 9.7367
+best_epoch_Pearson_r 0.4281
+best_epoch_Spearman_r 0.3307
+best_epoch_R2 -0.4092
+
+per_dataset_best_accuracy (dataset n pearson_r spearman_r r2 rmse mae [low_n]):
+  celeba-gender 55 0.8437 0.8399 0.6930 0.0824 0.0382
+  cifar-10 73 0.7930 0.7871 0.5246 0.1488 0.1066
+  cifar-100 53 0.6078 0.6465 0.1539 0.1425 0.1092
+  coco 133 0.9388 0.9082 0.8527 0.0306 0.0232
+  imagenette 44 0.3383 0.3833 -0.5841 0.1586 0.1184
+  mnist 71 0.6560 0.7003 0.2012 0.1298 0.0400
+  places365 15 0.7309 0.7204 0.2831 0.0677 0.0560
+  svhn 70 0.6426 0.6999 -0.0311 0.3152 0.1860
+  wikitext 143 0.7272 0.8894 0.2511 0.1479 0.0735

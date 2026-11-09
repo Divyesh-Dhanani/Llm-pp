@@ -1,0 +1,25 @@
+\begin{table*}[t]
+\centering
+\footnotesize
+\caption{Ranking runs within each dataset, the use case of model selection. Kendall $\tau$ between predicted and true best accuracy, share of the five runs ranked highest by the predictor whose true accuracy is at least the fifth-highest (ties in the true accuracy count as top-5), and the accuracy lost by picking the predicted-best run; averaged over datasets weighted by size (all 9 test datasets) and over seeds.}
+\label{tab:ranking}
+\begin{tabular}{lccc}
+\toprule
+Method & Kendall $\tau$ & Top-5 recall & Selection regret (pts) \\
+\midrule
+Qwen3-8B, 3 ep. + proxies + code (answer-only) & 0.760 & 0.71 & 1.08 \\
+Qwen3-8B, 3 ep. + proxies (answer-only, $1\times32$) & 0.743 & 0.76 & 1.24 \\
+Gemma-2-9B, 3 ep. + proxies & 0.736 & 0.76 & 1.21 \\
+Qwen3-8B, 3 ep. + proxies + code & 0.733 & 0.58 & 4.98 \\
+3 LLMs + XGBoost, 3 ep. + proxies & 0.733 & 0.84 & 1.14 \\
+XGBoost, 3 ep. + proxies & 0.727 & 0.79 & 1.18 \\
+Qwen3-8B, 3 ep. + proxies & 0.714 & 0.76 & 0.93 \\
+LC-PFN, 3 ep. & 0.700 & 0.73 & 1.02 \\
+XGBoost, 3 ep. & 0.695 & 0.74 & 2.26 \\
+Llama-3.1-8B, 3 ep. + proxies & 0.686 & 0.64 & 5.27 \\
+Qwen3-8B, 2 ep. + proxies & 0.677 & 0.71 & 1.92 \\
+Gemma-2-9B, 2 ep. + proxies & 0.674 & 0.70 & 1.34 \\
+Llama-3.1-8B, 2 ep. + proxies & 0.674 & 0.62 & 0.98 \\
+\bottomrule
+\end{tabular}
+\end{table*}

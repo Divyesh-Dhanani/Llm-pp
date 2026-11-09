@@ -1,0 +1,21 @@
+\begin{table*}[t]
+\centering
+\footnotesize
+\caption{Separating the training objective from checkpoint selection (Qwen3-8B, 3 ep.\ + proxies, every epoch's checkpoint kept; data order fixed across seeds). \emph{Epochs}: the epoch chosen for seeds 0, 42 and 123. Test $R^2$ and MAE: mean\,$\pm$\,SD over seeds. The fixed-epoch rows are shown for comparison and are not available to a practitioner in advance.}
+\label{tab:ckpt-selection}
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{lcccccc}
+\toprule
+Checkpoint rule & \multicolumn{3}{c}{Full-text loss} & \multicolumn{3}{c}{Answer-only loss} \\
+\cmidrule(lr){2-4}\cmidrule(lr){5-7}
+ & Epochs & $R^2$ & MAE & Epochs & $R^2$ & MAE \\
+\midrule
+Lowest validation loss (recipe) & 1, 2, 3 & 0.809\,$\pm$\,0.024 & 0.065\,$\pm$\,0.003 & 2, 2, 1 & 0.818\,$\pm$\,0.010 & 0.061\,$\pm$\,0.005 \\
+Lowest validation MAE & 2, 4, 4 & 0.820\,$\pm$\,0.007 & 0.063\,$\pm$\,0.001 & 3, 4, 4 & 0.824\,$\pm$\,0.005 & 0.061\,$\pm$\,0.001 \\
+Fixed epoch 1 & 1, 1, 1 & 0.811\,$\pm$\,0.021 & 0.068\,$\pm$\,0.004 & 1, 1, 1 & 0.795\,$\pm$\,0.013 & 0.068\,$\pm$\,0.001 \\
+Fixed epoch 2 & 2, 2, 2 & 0.827\,$\pm$\,0.008 & 0.062\,$\pm$\,0.001 & 2, 2, 2 & 0.829\,$\pm$\,0.011 & 0.058\,$\pm$\,0.001 \\
+Fixed epoch 3 & 3, 3, 3 & 0.794\,$\pm$\,0.011 & 0.067\,$\pm$\,0.001 & 3, 3, 3 & 0.807\,$\pm$\,0.012 & 0.062\,$\pm$\,0.001 \\
+\bottomrule
+\end{tabular}
+}
+\end{table*}

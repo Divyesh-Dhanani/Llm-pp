@@ -1,0 +1,29 @@
+\begin{table*}[t]
+\centering
+\footnotesize
+\caption{Best-epoch prediction evaluated as an early-stopping decision. Training stops at the predicted epoch and the best checkpoint seen so far is kept. \emph{Budget used} is the stopping epoch as a share of the run's budget; a \emph{hit} keeps an accuracy within one point of the run's peak; \emph{regret} is the accuracy given up. Early stopping observes the curve online; the predictors decide after epoch 2 or 3. LLM and XGBoost predictions are averaged over seeds; CIs are cluster bootstraps over test architectures.}
+\label{tab:best-epoch}
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{lcccccc}
+\toprule
+Stopping rule & Budget used & Hit within 1 pt & 95\% CI & Mean regret (pts) & 95\% CI & Median regret \\
+\midrule
+Oracle (true best epoch) & 80\% & 100\% & [100\%, 100\%] & 0.00 & [0.00, 0.00] & 0.00 \\
+Always train to the end & 100\% & 100\% & [100\%, 100\%] & 0.00 & [0.00, 0.00] & 0.00 \\
+Per-dataset training mean & 79\% & 86\% & [81\%, 91\%] & 0.56 & [0.36, 0.85] & 0.09 \\
+Stop at 70\% of budget & 70\% & 72\% & [61\%, 83\%] & 0.95 & [0.62, 1.38] & 0.30 \\
+Stop at 80\% of budget & 80\% & 82\% & [72\%, 89\%] & 0.58 & [0.37, 0.85] & 0.16 \\
+Stop at 90\% of budget & 90\% & 94\% & [89\%, 97\%] & 0.25 & [0.17, 0.34] & 0.03 \\
+Early stopping, patience 5 & 63\% & 81\% & [71\%, 92\%] & 0.91 & [0.50, 1.51] & 0.00 \\
+Early stopping, patience 10 & 78\% & 95\% & [91\%, 98\%] & 0.36 & [0.12, 0.69] & 0.00 \\
+Early stopping, patience 20 & 92\% & 99\% & [99\%, 100\%] & 0.13 & [0.01, 0.36] & 0.00 \\
+XGBoost, 3 ep. + proxies & 69\% & 79\% & [68\%, 89\%] & 0.66 & [0.44, 0.88] & 0.30 \\
+Qwen3-8B, 3 ep. + proxies & 83\% & 93\% & [88\%, 97\%] & 0.68 & [0.37, 1.07] & 0.00 \\
+Llama-3.1-8B, 3 ep. + proxies & 92\% & 97\% & [95\%, 99\%] & 0.26 & [0.09, 0.57] & 0.00 \\
+Gemma-2-9B, 3 ep. + proxies & 88\% & 95\% & [92\%, 97\%] & 0.52 & [0.19, 0.93] & 0.00 \\
+3 LLMs & 87\% & 96\% & [95\%, 97\%] & 0.44 & [0.21, 0.88] & 0.00 \\
+3 LLMs + XGBoost & 78\% & 92\% & [89\%, 96\%] & 0.44 & [0.28, 0.71] & 0.10 \\
+\bottomrule
+\end{tabular}
+}
+\end{table*}

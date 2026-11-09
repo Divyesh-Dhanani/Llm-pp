@@ -1,0 +1,57 @@
+Sun Oct  4 14:46:52 CEST 2026 START qwen3-8b seed0
+Sun Oct  4 18:41:05 CEST 2026 END qwen3-8b seed0 EXIT_CODE=1
+Sun Oct  4 18:41:05 CEST 2026 START qwen3-8b seed42
+--- restart Sun Oct  4 20:15:38 CEST 2026
+Sun Oct  4 20:15:38 CEST 2026 START qwen3-8b seed0
+Sun Oct  4 20:15:38 CEST 2026 END qwen3-8b seed0 EXIT_CODE=1
+Sun Oct  4 20:15:38 CEST 2026 START qwen3-8b seed42
+Sun Oct  4 20:15:38 CEST 2026 END qwen3-8b seed42 EXIT_CODE=1 (train)
+Sun Oct  4 20:15:38 CEST 2026 START qwen3-8b seed123
+Sun Oct  4 20:15:38 CEST 2026 END qwen3-8b seed123 EXIT_CODE=1 (train)
+Sun Oct  4 20:15:38 CEST 2026 START llama3.1-8b seed0
+Sun Oct  4 20:15:38 CEST 2026 END llama3.1-8b seed0 EXIT_CODE=1 (train)
+Sun Oct  4 20:15:38 CEST 2026 START llama3.1-8b seed42
+Sun Oct  4 20:15:39 CEST 2026 END llama3.1-8b seed42 EXIT_CODE=1 (train)
+Sun Oct  4 20:15:39 CEST 2026 START llama3.1-8b seed123
+Sun Oct  4 20:15:39 CEST 2026 END llama3.1-8b seed123 EXIT_CODE=1 (train)
+Sun Oct  4 20:15:39 CEST 2026 START gemma2-9b seed0
+Sun Oct  4 20:15:39 CEST 2026 END gemma2-9b seed0 EXIT_CODE=1 (train)
+Sun Oct  4 20:15:39 CEST 2026 START gemma2-9b seed42
+Sun Oct  4 20:15:39 CEST 2026 END gemma2-9b seed42 EXIT_CODE=1 (train)
+Sun Oct  4 20:15:39 CEST 2026 START gemma2-9b seed123
+Sun Oct  4 20:15:39 CEST 2026 END gemma2-9b seed123 EXIT_CODE=1 (train)
+Sun Oct  4 20:15:39 CEST 2026 QUEUE DONE
+--- restart (path fix) Sun Oct  4 20:17:49 CEST 2026
+Sun Oct  4 20:17:49 CEST 2026 START qwen3-8b seed0
+Sun Oct  4 20:49:58 CEST 2026 END qwen3-8b seed0 EXIT_CODE=0
+Sun Oct  4 20:49:58 CEST 2026 START qwen3-8b seed42
+Sun Oct  4 20:53:15 CEST 2026 END qwen3-8b seed42 EXIT_CODE=1 (train)
+Sun Oct  4 20:53:15 CEST 2026 START qwen3-8b seed123
+Sun Oct  4 21:40:08 CEST 2026 END qwen3-8b seed123 EXIT_CODE=1 (train)
+Sun Oct  4 21:40:08 CEST 2026 START llama3.1-8b seed0
+--- restart: wait-for-free-GPU queue Sun Oct  4 21:44:17 CEST 2026
+--- pass 1 Sun Oct  4 21:44:17 CEST 2026
+Sun Oct  4 21:44:17 CEST 2026 WAITING for >= 20000 MiB free GPU: qwen3-8b seed42
+--- queue stopped by user request; running qwen3-8b seed42 alone Sun Oct  4 21:47:38 CEST 2026
+--- qwen 42 then 123 Mon Oct  5 09:32:11 CEST 2026
+Mon Oct  5 09:32:11 CEST 2026 START qwen3-8b seed42
+Mon Oct  5 11:12:54 CEST 2026 END qwen3-8b seed42 EXIT_CODE=0
+Mon Oct  5 11:12:54 CEST 2026 START qwen3-8b seed123
+Mon Oct  5 12:53:41 CEST 2026 END qwen3-8b seed123 EXIT_CODE=0
+Mon Oct  5 12:53:41 CEST 2026 QWEN 42+123 DONE
+--- llama 0 42 123 Mon Oct  5 15:00:22 CEST 2026
+Mon Oct  5 15:00:22 CEST 2026 START llama3.1-8b seed0
+Mon Oct  5 16:19:41 CEST 2026 END llama3.1-8b seed0 EXIT_CODE=0
+Mon Oct  5 16:19:41 CEST 2026 START llama3.1-8b seed42
+Mon Oct  5 17:55:29 CEST 2026 END llama3.1-8b seed42 EXIT_CODE=0
+Mon Oct  5 17:55:29 CEST 2026 START llama3.1-8b seed123
+Mon Oct  5 19:14:40 CEST 2026 END llama3.1-8b seed123 EXIT_CODE=0
+Mon Oct  5 19:14:40 CEST 2026 llama3.1-8b 0 42 123 DONE
+--- gemma 0 42 123 Mon Oct  5 20:53:42 CEST 2026
+Mon Oct  5 20:53:42 CEST 2026 START gemma2-9b seed0
+Mon Oct  5 22:51:49 CEST 2026 END gemma2-9b seed0 EXIT_CODE=0
+Mon Oct  5 22:51:49 CEST 2026 START gemma2-9b seed42
+Tue Oct  6 01:17:47 CEST 2026 END gemma2-9b seed42 EXIT_CODE=0
+Tue Oct  6 01:17:47 CEST 2026 START gemma2-9b seed123
+Tue Oct  6 03:14:06 CEST 2026 END gemma2-9b seed123 EXIT_CODE=0
+Tue Oct  6 03:14:06 CEST 2026 gemma2-9b 0 42 123 DONE

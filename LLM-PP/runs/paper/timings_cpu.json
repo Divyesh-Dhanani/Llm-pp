@@ -1,0 +1,7 @@
+{
+  "_note": "Measured 2026-10-19 with /usr/bin/time. XGBoost: full grid (4 input sets x 5 seeds x 2 targets = 40 fits) of ab/gpt/paper/xgboost_grid.py on AMD Ryzen 7 7800X3D (8 cores / 16 threads). LC-PFN: ab/gpt/paper/lcpfn_baseline.py, 2 x 657 test predictions, CPU only, on the LLM machine.",
+  "xgboost_grid_wall_seconds": 16.85,
+  "xgboost_grid_fits": 40,
+  "lcpfn_wall_seconds": 9.48,
+  "lcpfn_predictions": 1314
+}

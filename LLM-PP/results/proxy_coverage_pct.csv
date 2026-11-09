@@ -1,0 +1,4 @@
+split,proxy_synflow,proxy_nwot,proxy_grad_norm,proxy_log_params,proxy_depth
+train,92.2,97.8,67.8,99.3,99.3
+val,24.3,59.3,22.5,100.0,100.0
+test,51.8,42.6,39.3,100.0,100.0
